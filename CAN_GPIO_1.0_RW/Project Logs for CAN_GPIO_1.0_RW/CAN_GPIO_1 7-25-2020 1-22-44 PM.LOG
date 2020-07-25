@@ -1,0 +1,19 @@
+Removed Member From Class: ClassName=Connectors Member=J?
+Change Component Designator: OldDesignator=J5 NewDesignator=J6
+Change Component Designator: OldDesignator=J6 NewDesignator=J7
+Change Component Designator: OldDesignator=J7 NewDesignator=J8
+Change Component Designator: OldDesignator=J8 NewDesignator=J9
+Change Component Designator: OldDesignator=J9 NewDesignator=J10
+Change Component Designator: OldDesignator=J10 NewDesignator=J11
+Change Component Designator: OldDesignator=J11 NewDesignator=J12
+Change Component Designator: OldDesignator=J? NewDesignator=J5
+Change Component Designator: OldDesignator=P1 NewDesignator=P2
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Added Component: Designator=C3(Cap 0805)
+Added Component: Designator=C4(Cap 0805)
+Added Component: Designator=C5(Cap 0805)
+Added Component: Designator=C6(Cap 0805)
+Added Component: Designator=C7(Cap 0805)
+Added Component: Designator=C8(Cap 0805)
+Change Net Name : Old Net Name=NetP1_2 New Net Name=NetP2_2
+Added Member To Class: ClassName=Connectors Member=Component J12 Molex Micro

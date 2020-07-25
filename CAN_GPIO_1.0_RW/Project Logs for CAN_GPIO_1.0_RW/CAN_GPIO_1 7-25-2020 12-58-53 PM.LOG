@@ -1,0 +1,317 @@
+Added Component: Designator=1(Test Point Through-hole)
+Added Component: Designator=2(Test Point Through-hole)
+Added Component: Designator=C1(Cap 0805)
+Added Component: Designator=C2(Cap 0805)
+Added Component: Designator=C3(Cap 0805)
+Added Component: Designator=C4(Cap 0805)
+Added Component: Designator=C5(Cap 0805)
+Added Component: Designator=C6(Cap 0805)
+Added Component: Designator=C7(Cap 0805)
+Added Component: Designator=C8(Cap 0805)
+Added Component: Designator=J1(programming)
+Added Component: Designator=J2(microfit 6 pin)
+Added Component: Designator=J3(microfit 4 pin)
+Added Component: Designator=J4(SMTC-SSQ-108-02-X-D)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.samtec.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.samtec.com/documents/webfiles/pdf/SSQ_TH.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.samtec.com/documents/webfiles/cpdf/SSQ-1XX-XX-XXX-X-XX-XXX-XX-X-MKT.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "F-214"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through-hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Assembly, Socket Strip .025[0.64] SQ Tail"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SSQ-108-02-X-D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "BD, 6/1987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "SSQ-108-02-G-D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Added Component: Designator=J5(microfit 4 pin)
+Added Component: Designator=J6(microfit 4 pin)
+Added Component: Designator=J7(microfit 4 pin)
+Added Component: Designator=J8(microfit 4 pin)
+Added Component: Designator=J9(microfit 4 pin)
+Added Component: Designator=J10(microfit 4 pin)
+Added Component: Designator=J11(microfit 4 pin)
+Added Component: Designator=J?(microfit 6 pin)
+Added Component: Designator=P1(HDR1X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P?(MOLX-43045-0812_V)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.molex.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.molex.com/webdocs/datasheets/pdf/en-us/0430450812_PCB_HEADERS.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.molex.com/pdm_docs/sd/430450812_sd.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "No. of Positions"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "No. of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "8-Pin PCB Header, Vertical, Pitch 3 mm, Mated Height 17.27 mm, Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Rev. F, 06/2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "43045-0812"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "3 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Max"; Value = "105 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Min"; Value = "-40 degC"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4.7 kOhm"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "47 kOhm"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "120.00 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=RESET(Switch 6mm 24V (NO))
+Add component (AddParameter): Name = "Configuration_Pole-Throw"; Value = "Single Pole - Single Throw"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact_Current_Rating"; Value = "50 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "450-1804-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/te-connectivity-alcoswitch-switches/1825910-7/450-1804-ND/1731414?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "1825910-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/1825910-7/TE%20Connectivity%20ALCOSWITCH%20Switches/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TE_purchase_URL"; Value = "https://www.te.com/usa-en/product-1825910-7.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP1(Test Point pad)
+Added Component: Designator=TP2(Test Point pad)
+Added Component: Designator=TP3(Test Point pad)
+Added Component: Designator=TP4(Test Point Through-hole)
+Added Component: Designator=TP5(Test Point Through-hole)
+Added Component: Designator=TP6(Test Point pad)
+Added Component: Designator=TP7(Test Point pad)
+Added Component: Designator=TP8(Test Point pad)
+Added Component: Designator=TP9(Test Point pad)
+Added Component: Designator=U1(TQFP50P1200X1200X160-64N)
+Add component (AddParameter): Name = "Part_Number"; Value = "CY8C4248AZI-L485"; VariantName = "[No Variations]"
+Added Component: Designator=U2(SOIC127P600X175-8N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MCP2562-E/SN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SO-8 Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MCP2562-E/SN/Microchip/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Vcc1(Test Point Through-hole)
+Added Component: Designator=Y1(SG-636)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SG-636PCW 50.0000MC3: ROHS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.mouser.com/ds/2/137/G-636PCE_en-1003252.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Epson Timing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SG-636PCW 50.0000MC3: ROHS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RS Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RS Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+24 Pin=J4-5
+Added Pin To Net: NetName=+24 Pin=J4-7
+Added Pin To Net: NetName=+24 Pin=J4-9
+Added Pin To Net: NetName=+24 Pin=J4-11
+Added Pin To Net: NetName=+24 Pin=J4-13
+Added Pin To Net: NetName=+24 Pin=J4-15
+Added Net: Name=+24
+Added Pin To Net: NetName=3.3V Pin=2-1
+Added Pin To Net: NetName=3.3V Pin=J4-2
+Added Net: Name=3.3V
+Added Pin To Net: NetName=5V Pin=1-1
+Added Pin To Net: NetName=5V Pin=J4-1
+Added Net: Name=5V
+Added Pin To Net: NetName=CANH Pin=J4-3
+Added Pin To Net: NetName=CANH Pin=J5-3
+Added Pin To Net: NetName=CANH Pin=P1-3
+Added Pin To Net: NetName=CANH Pin=TP7-1
+Added Pin To Net: NetName=CANH Pin=U2-7
+Added Net: Name=CANH
+Added Pin To Net: NetName=CANL Pin=J4-4
+Added Pin To Net: NetName=CANL Pin=J5-4
+Added Pin To Net: NetName=CANL Pin=R3-1
+Added Pin To Net: NetName=CANL Pin=TP9-1
+Added Pin To Net: NetName=CANL Pin=U2-6
+Added Net: Name=CANL
+Added Pin To Net: NetName=CANRX Pin=TP8-1
+Added Pin To Net: NetName=CANRX Pin=U1-39
+Added Pin To Net: NetName=CANRX Pin=U2-4
+Added Net: Name=CANRX
+Added Pin To Net: NetName=CANTX Pin=TP6-1
+Added Pin To Net: NetName=CANTX Pin=U1-40
+Added Pin To Net: NetName=CANTX Pin=U2-1
+Added Net: Name=CANTX
+Added Pin To Net: NetName=Clock Pin=J1-4
+Added Pin To Net: NetName=Clock Pin=TP5-1
+Added Pin To Net: NetName=Clock Pin=U1-21
+Added Net: Name=Clock
+Added Pin To Net: NetName=CTS Pin=J?-2
+Added Pin To Net: NetName=CTS Pin=U1-60
+Added Net: Name=CTS
+Added Pin To Net: NetName=Data Pin=J1-2
+Added Pin To Net: NetName=Data Pin=R2-1
+Added Pin To Net: NetName=Data Pin=TP4-1
+Added Pin To Net: NetName=Data Pin=U1-20
+Added Net: Name=Data
+Added Pin To Net: NetName=ENC A Pin=J2-3
+Added Pin To Net: NetName=ENC A Pin=U1-53
+Added Net: Name=ENC A
+Added Pin To Net: NetName=ENC B Pin=J2-4
+Added Pin To Net: NetName=ENC B Pin=U1-54
+Added Net: Name=ENC B
+Added Pin To Net: NetName=ENC Z Pin=J2-5
+Added Pin To Net: NetName=ENC Z Pin=U1-55
+Added Net: Name=ENC Z
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=GND Pin=J1-5
+Added Pin To Net: NetName=GND Pin=J1-9
+Added Pin To Net: NetName=GND Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J3-1
+Added Pin To Net: NetName=GND Pin=J4-8
+Added Pin To Net: NetName=GND Pin=J4-10
+Added Pin To Net: NetName=GND Pin=J4-12
+Added Pin To Net: NetName=GND Pin=J4-14
+Added Pin To Net: NetName=GND Pin=J4-16
+Added Pin To Net: NetName=GND Pin=J5-1
+Added Pin To Net: NetName=GND Pin=J7-1
+Added Pin To Net: NetName=GND Pin=J8-1
+Added Pin To Net: NetName=GND Pin=J9-1
+Added Pin To Net: NetName=GND Pin=J10-1
+Added Pin To Net: NetName=GND Pin=J11-1
+Added Pin To Net: NetName=GND Pin=J?-1
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=GND Pin=RESET-1
+Added Pin To Net: NetName=GND Pin=RESET-2
+Added Pin To Net: NetName=GND Pin=TP3-1
+Added Pin To Net: NetName=GND Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-17
+Added Pin To Net: NetName=GND Pin=U1-49
+Added Pin To Net: NetName=GND Pin=U1-57
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-8
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=Laser5V_1 Pin=J7-4
+Added Pin To Net: NetName=Laser5V_1 Pin=U1-12
+Added Net: Name=Laser5V_1
+Added Pin To Net: NetName=Laser5V_2 Pin=J8-4
+Added Pin To Net: NetName=Laser5V_2 Pin=U1-13
+Added Net: Name=Laser5V_2
+Added Pin To Net: NetName=Laser5V_3 Pin=J9-4
+Added Pin To Net: NetName=Laser5V_3 Pin=U1-14
+Added Net: Name=Laser5V_3
+Added Pin To Net: NetName=Laser5V_4 Pin=J10-4
+Added Pin To Net: NetName=Laser5V_4 Pin=U1-23
+Added Net: Name=Laser5V_4
+Added Pin To Net: NetName=Laser5V_5 Pin=J11-4
+Added Pin To Net: NetName=Laser5V_5 Pin=U1-19
+Added Net: Name=Laser5V_5
+Added Pin To Net: NetName=MISO Pin=P?-2
+Added Pin To Net: NetName=MISO Pin=U1-28
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=P?-5
+Added Pin To Net: NetName=MOSI Pin=U1-27
+Added Net: Name=MOSI
+Added Pin To Net: NetName=NetC5_2 Pin=U1-48
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=R3-2
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=RESET-3
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=Oscillator Pin=U1-45
+Added Pin To Net: NetName=Oscillator Pin=Y1-3
+Added Net: Name=Oscillator
+Added Pin To Net: NetName=Pot Pin=J6-3
+Added Pin To Net: NetName=Pot Pin=U1-2
+Added Net: Name=Pot
+Added Pin To Net: NetName=Reset Pin=J1-10
+Added Pin To Net: NetName=Reset Pin=RESET-4
+Added Pin To Net: NetName=Reset Pin=U1-47
+Added Net: Name=Reset
+Added Pin To Net: NetName=RTS Pin=J?-6
+Added Pin To Net: NetName=RTS Pin=U1-61
+Added Net: Name=RTS
+Added Pin To Net: NetName=RXD Pin=J?-5
+Added Pin To Net: NetName=RXD Pin=U1-58
+Added Net: Name=RXD
+Added Pin To Net: NetName=SC1 Pin=P?-3
+Added Pin To Net: NetName=SC1 Pin=U1-30
+Added Net: Name=SC1
+Added Pin To Net: NetName=SC2 Pin=P?-7
+Added Pin To Net: NetName=SC2 Pin=U1-31
+Added Net: Name=SC2
+Added Pin To Net: NetName=SC3 Pin=P?-4
+Added Pin To Net: NetName=SC3 Pin=U1-32
+Added Net: Name=SC3
+Added Pin To Net: NetName=SC4 Pin=P?-8
+Added Pin To Net: NetName=SC4 Pin=U1-33
+Added Net: Name=SC4
+Added Pin To Net: NetName=SCK Pin=P?-6
+Added Pin To Net: NetName=SCK Pin=U1-29
+Added Net: Name=SCK
+Added Pin To Net: NetName=SCL Pin=J3-2
+Added Pin To Net: NetName=SCL Pin=U1-43
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA Pin=J3-3
+Added Pin To Net: NetName=SDA Pin=U1-44
+Added Net: Name=SDA
+Added Pin To Net: NetName=ServoPWM1 Pin=J7-3
+Added Pin To Net: NetName=ServoPWM1 Pin=U1-18
+Added Net: Name=ServoPWM1
+Added Pin To Net: NetName=ServoPWM2 Pin=J8-3
+Added Pin To Net: NetName=ServoPWM2 Pin=U1-22
+Added Net: Name=ServoPWM2
+Added Pin To Net: NetName=ServoPWM3 Pin=J9-3
+Added Pin To Net: NetName=ServoPWM3 Pin=U1-24
+Added Net: Name=ServoPWM3
+Added Pin To Net: NetName=ServoPWM4 Pin=J10-3
+Added Pin To Net: NetName=ServoPWM4 Pin=U1-51
+Added Net: Name=ServoPWM4
+Added Pin To Net: NetName=ServoPWM5 Pin=J11-3
+Added Pin To Net: NetName=ServoPWM5 Pin=U1-37
+Added Net: Name=ServoPWM5
+Added Pin To Net: NetName=TXD Pin=J?-4
+Added Pin To Net: NetName=TXD Pin=U1-59
+Added Net: Name=TXD
+Added Pin To Net: NetName=VCC Pin=J1-1
+Added Pin To Net: NetName=VCC Pin=J2-2
+Added Pin To Net: NetName=VCC Pin=J5-2
+Added Pin To Net: NetName=VCC Pin=J6-2
+Added Pin To Net: NetName=VCC Pin=J7-2
+Added Pin To Net: NetName=VCC Pin=J8-2
+Added Pin To Net: NetName=VCC Pin=J9-2
+Added Pin To Net: NetName=VCC Pin=J10-2
+Added Pin To Net: NetName=VCC Pin=J11-2
+Added Pin To Net: NetName=VCC Pin=J?-3
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=VCC Pin=TP1-1
+Added Pin To Net: NetName=VCC Pin=TP2-1
+Added Pin To Net: NetName=VCC Pin=U1-11
+Added Pin To Net: NetName=VCC Pin=U1-26
+Added Pin To Net: NetName=VCC Pin=U1-50
+Added Pin To Net: NetName=VCC Pin=U1-56
+Added Pin To Net: NetName=VCC Pin=U2-3
+Added Pin To Net: NetName=VCC Pin=U2-5
+Added Pin To Net: NetName=VCC Pin=Vcc1-1
+Added Pin To Net: NetName=VCC Pin=Y1-1
+Added Pin To Net: NetName=VCC Pin=Y1-4
+Added Net: Name=VCC
+Added Pin To Net: NetName=VREF Pin=J6-1
+Added Pin To Net: NetName=VREF Pin=U1-1
+Added Net: Name=VREF
+Added Class: Name=CAN
+Added Class: Name=Connectors
+Added Class: Name=PSoC
+Added Room: Name=CAN
+Added Room: Name=Connectors
+Added Room: Name=PSoC

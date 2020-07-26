@@ -1,0 +1,56 @@
+Change Component Footprint: Designator=C1 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C2 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C3 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C4 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C5 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C6 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C7 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Footprint: Designator=C8 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Component Comment : Designator=C3 Old Comment=Capacitor 0805 New Comment=0.1 µF
+Change Component Comment : Designator=C4 Old Comment=Capacitor 0805 New Comment=0.1 µF
+Change Component Comment : Designator=C6 Old Comment=Capacitor 0805 New Comment=0.1 µF
+Change Component Comment : Designator=C7 Old Comment=Capacitor 0805 New Comment=0.1 µF
+Change Component Comment : Designator=C8 Old Comment=Capacitor 0805 New Comment=0.1 µF
+Change Component Comment : Designator=C5 Old Comment=Capacitor 0805 New Comment=1 µF
+Change Component Comment : Designator=C1 Old Comment=Capacitor 0805 New Comment=10 µF
+Change Component Comment : Designator=C2 Old Comment=Capacitor 0805 New Comment=10 µF
+Change component parameters: Designator = "C1" ("C1"); Footprint = "Cap 0805"; UniqueID = "\OOPUWROB" ("\OOPUWROB")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "10 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C2" ("C2"); Footprint = "Cap 0805"; UniqueID = "\QMYRTSNU" ("\QMYRTSNU")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "10 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C3" ("C3"); Footprint = "Cap 0805"; UniqueID = "\SDDHSALE" ("\SDDHSALE")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C4" ("C4"); Footprint = "Cap 0805"; UniqueID = "\VAVARDVI" ("\VAVARDVI")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C5" ("C5"); Footprint = "Cap 0805"; UniqueID = "\HNKODMUH" ("\HNKODMUH")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C6" ("C6"); Footprint = "Cap 0805"; UniqueID = "\QDYEFAQV" ("\QDYEFAQV")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C7" ("C7"); Footprint = "Cap 0805"; UniqueID = "\WLSDESZW" ("\WLSDESZW")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C8" ("C8"); Footprint = "Cap 0805"; UniqueID = "\NBVGFXHQ" ("\NBVGFXHQ")
+Change component parameters (AddParameter): Name = "Capacitance"; Value = "0.1 µF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Size/Dimension"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "0805"; VariantName = "[No Variations]"

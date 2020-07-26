@@ -1,0 +1,11 @@
+Added Component: Designator=C1(Cap 0805)
+Added Component: Designator=C2(Cap 0805)
+Added Component: Designator=C3(Cap 0805)
+Added Component: Designator=C4(Cap 0805)
+Added Component: Designator=C5(Cap 0805)
+Added Component: Designator=C6(Cap 0805)
+Added Component: Designator=C7(Cap 0805)
+Added Component: Designator=C8(Cap 0805)
+Added Member To Class: ClassName=Connectors Member=Component J2 Programming Header
+Added Member To Class: ClassName=Connectors Member=Component J8 43045-0812
+Added Member To Class: ClassName=Connectors Member=Component J10 Molex Micro

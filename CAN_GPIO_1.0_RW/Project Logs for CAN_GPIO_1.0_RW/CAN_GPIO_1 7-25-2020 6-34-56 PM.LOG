@@ -1,0 +1,14 @@
+Added Component: Designator=F1(Screw Hole)
+Added Component: Designator=F2(Screw Hole)
+Added Component: Designator=F3(Screw Hole)
+Added Component: Designator=F4(Screw Hole)
+Added Member To Class: ClassName=PSoC Member=Component F1 Screw Hole
+Added Member To Class: ClassName=PSoC Member=Component F2 Screw Hole
+Added Member To Class: ClassName=PSoC Member=Component F3 Screw Hole
+Added Member To Class: ClassName=PSoC Member=Component F4 Screw Hole
+Added Member To Class: ClassName=Connectors Member=Component J2 Programming Header
+Added Member To Class: ClassName=Connectors Member=Component J8 43045-0812
+Added Member To Class: ClassName=Connectors Member=Component J10 Molex Micro
+Added Room: Name=CAN
+Added Room: Name=Connectors
+Added Room: Name=PSoC

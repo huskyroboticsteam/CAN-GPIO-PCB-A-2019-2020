@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=1 NewDesignator=5.5V
+Change Component Designator: OldDesignator=2 NewDesignator=3.3V
+Added Room: Name=CAN
+Added Room: Name=Connectors
+Added Room: Name=PSoC

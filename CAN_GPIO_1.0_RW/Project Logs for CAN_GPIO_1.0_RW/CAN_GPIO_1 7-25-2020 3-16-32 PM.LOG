@@ -1,0 +1,20 @@
+Change Physical Footprint: Designator=J2 Old Footprint=microfit 6 pin New Footprint=microfit 6 pin
+Change Physical Footprint: Designator=J3 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J4 Old Footprint=SMTC-SSQ-108-02-X-D New Footprint=SMTC-SSQ-108-02-X-D
+Change Physical Footprint: Designator=J5 Old Footprint=microfit 6 pin New Footprint=microfit 6 pin
+Change Physical Footprint: Designator=J6 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J7 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J8 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J9 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J10 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J11 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J12 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=RESET Old Footprint=Switch 6mm 24V (NO) New Footprint=Switch 6mm 24V (NO)
+Change Physical Footprint: Designator=TP1 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP2 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP3 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP6 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP7 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP8 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP9 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=U2 Old Footprint=SOIC127P600X175-8N New Footprint=SOIC127P600X175-8N

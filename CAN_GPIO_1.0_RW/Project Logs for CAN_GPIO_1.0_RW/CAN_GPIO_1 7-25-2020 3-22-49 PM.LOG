@@ -1,0 +1,35 @@
+Change Physical Footprint: Designator=1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=2 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=C1 Old Footprint=CAPC2013X140X50LL20T25 New Footprint=CAPC2013X140X50LL20T25
+Change Physical Footprint: Designator=C2 Old Footprint=CAPC2013X140X50LL20T25 New Footprint=CAPC2013X140X50LL20T25
+Change Physical Footprint: Designator=J1 Old Footprint=programming3D New Footprint=programming3D
+Change Physical Footprint: Designator=J2 Old Footprint=microfit 6 pin New Footprint=microfit 6 pin
+Change Physical Footprint: Designator=J3 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J4 Old Footprint=SMTC-SSQ-108-02-X-D New Footprint=SMTC-SSQ-108-02-X-D
+Change Physical Footprint: Designator=J5 Old Footprint=microfit 6 pin New Footprint=microfit 6 pin
+Change Physical Footprint: Designator=J6 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J7 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J8 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J9 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J10 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J11 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=J12 Old Footprint=microfit 4 pin New Footprint=microfit 4 pin
+Change Physical Footprint: Designator=P1 Old Footprint=MOLX-43045-0812_V New Footprint=MOLX-43045-0812_V
+Change Physical Footprint: Designator=P2 Old Footprint=HDR1X3 New Footprint=HDR1X3
+Change Physical Footprint: Designator=R1 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R2 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R3 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=RESET Old Footprint=Switch 6mm 24V (NO) New Footprint=Switch 6mm 24V (NO)
+Change Physical Footprint: Designator=TP1 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP2 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP3 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP4 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=TP5 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=TP6 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP7 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP8 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=TP9 Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=U1 Old Footprint=TQFP50P1200X1200X160-64N New Footprint=TQFP50P1200X1200X160-64N
+Change Physical Footprint: Designator=U2 Old Footprint=SOIC127P600X175-8N New Footprint=SOIC127P600X175-8N
+Change Physical Footprint: Designator=Vcc1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Y1 Old Footprint=SG-636_3D New Footprint=SG-636_3D

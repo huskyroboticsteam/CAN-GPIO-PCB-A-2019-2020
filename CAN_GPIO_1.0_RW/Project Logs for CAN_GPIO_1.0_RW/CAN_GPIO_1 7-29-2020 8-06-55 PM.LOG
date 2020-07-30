@@ -1,0 +1,14 @@
+Removed Member From Class: ClassName=PSoC Member=R6
+Removed Member From Class: ClassName=PSoC Member=R7
+Added Component: Designator=P2_5(Test Point Through-hole)
+Added Component: Designator=P2_6(Test Point Through-hole)
+Added Component: Designator=P2_7(Test Point Through-hole)
+Added Pin To Net: NetName=P2_5 Pin=P2_5-1
+Added Pin To Net: NetName=P2_6 Pin=P2_6-1
+Added Pin To Net: NetName=P2_7 Pin=P2_7-1
+Added Member To Class: ClassName=PSoC Member=Component F4 Screw Hole
+Added Member To Class: ClassName=Connectors Member=Component P2_5 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P2_6 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P2_7 Test Point
+Added Member To Class: ClassName=PSoC Member=Component R2 100 Ohm
+Added Member To Class: ClassName=PSoC Member=Component R3 100 Ohm

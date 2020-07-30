@@ -1,0 +1,158 @@
+Removed Pin From Net: NetName=5V Pin=5V-1
+Removed Pin From Net: NetName=VCC Pin=Vcc-1
+Removed Member From Class: ClassName=Connectors Member=Vcc
+Change Component Footprint: Designator=3.3V Old Footprint=Test Point Through-hole New Footprint=JUMPER
+Change Component Footprint: Designator=5V Old Footprint=Test Point Through-hole New Footprint=JUMPER
+Change Component Comment : Designator=3.3V Old Comment=Test Point New Comment=JUMPER
+Change Component Comment : Designator=5V Old Comment=Test Point New Comment=JUMPER
+Change Component Designator: OldDesignator=F3 NewDesignator=F4
+Change Component Designator: OldDesignator=F4 NewDesignator=F3
+Change Component Designator: OldDesignator=J14 NewDesignator=J1
+Change Component Designator: OldDesignator=R2 NewDesignator=R6
+Change Component Designator: OldDesignator=R3 NewDesignator=R7
+Change Managed Component Library Link : Designator=3.3V Old VaultGUID= New VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F Old ItemGUID= New ItemGUID=89664D6F-9AE3-4B2F-BF30-651739FD8254 Old RevisionGUID= New RevisionGUID=532D5EE1-212E-4553-8ABC-45DD3F10106E
+Change Managed Component Library Link : Designator=5V Old VaultGUID= New VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F Old ItemGUID= New ItemGUID=89664D6F-9AE3-4B2F-BF30-651739FD8254 Old RevisionGUID= New RevisionGUID=532D5EE1-212E-4553-8ABC-45DD3F10106E
+Change component parameters: Designator = "3.3V" ("3.3V"); Footprint = "Test Point Through-hole"; UniqueID = "\WQJSEKJR" ("\WQJSEKJR")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Resistance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "5V" ("5V"); Footprint = "Test Point Through-hole"; UniqueID = "\RDSWPBUO" ("\RDSWPBUO")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Resistance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J2(691101710003)
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://katalog.we-online.de/em/datasheet/6911017100xx.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40to105degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "691101710003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Box"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "691101710003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Number"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "5.00mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Added Component: Designator=P2_5(Test Point Through-hole)
+Added Component: Designator=P2_6(Test Point Through-hole)
+Added Component: Designator=P2_7(Test Point Through-hole)
+Added Component: Designator=R2(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(CKCP-TDA04H0SB1R_V)
+Add component (AddParameter): Name = "Case\Package"; Value = "DIP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ck-components.com/media/1328/tda.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Current Rating"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Copper"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "02/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "2.3 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Pitch"; Value = "1.27 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "6.21 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Contact Resistance"; Value = "100 mohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Current Rating"; Value = "25 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (DC)"; Value = "24 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "70"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "8-Pin Surface Mount Device, Body 6.21 x 6.2 mm, Pitch 1.27 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "TDA04H0SB1R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Rail/Tube"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "true"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Throw Configuration"; Value = "SPST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "24 V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=3.3V-2
+Added Pin To Net: NetName=VCC Pin=5V-1
+Added Pin To Net: NetName=5V Pin=5V-2
+Added Pin To Net: NetName=GND Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=SW1-2
+Added Pin To Net: NetName=GND Pin=SW1-3
+Added Pin To Net: NetName=GND Pin=SW1-4
+Change Net Name : Old Net Name=NetJ14_2 New Net Name=NetJ1_2
+Added Pin To Net: NetName=Dip1 Pin=R2-2
+Added Pin To Net: NetName=Dip1 Pin=U1-46
+Added Net: Name=Dip1
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=NetR2_1 Pin=SW1-8
+Added Net: Name=NetR2_1
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=SW1-7
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U1-62
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=SW1-6
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=U1-63
+Added Net: Name=NetR4_2
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=SW1-5
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=U1-64
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=P2_2 Pin=J2-3
+Added Pin To Net: NetName=P2_2 Pin=U1-4
+Added Net: Name=P2_2
+Added Pin To Net: NetName=P2_3 Pin=J2-2
+Added Pin To Net: NetName=P2_3 Pin=U1-5
+Added Net: Name=P2_3
+Added Pin To Net: NetName=P2_4 Pin=J2-1
+Added Pin To Net: NetName=P2_4 Pin=U1-6
+Added Net: Name=P2_4
+Added Pin To Net: NetName=P2_5 Pin=P2_5-1
+Added Pin To Net: NetName=P2_5 Pin=U1-7
+Added Net: Name=P2_5
+Added Pin To Net: NetName=P2_6 Pin=P2_6-1
+Added Pin To Net: NetName=P2_6 Pin=U1-8
+Added Net: Name=P2_6
+Added Pin To Net: NetName=P2_7 Pin=P2_7-1
+Added Pin To Net: NetName=P2_7 Pin=U1-9
+Added Net: Name=P2_7
+Added Member To Class: ClassName=Connectors Member=Component J2 691101710003
+Added Member To Class: ClassName=Connectors Member=Component P2_5 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P2_6 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P2_7 Test Point
+Added Member To Class: ClassName=PSoC Member=Component R2 100 Ohm
+Added Member To Class: ClassName=PSoC Member=Component R3 100 Ohm
+Added Member To Class: ClassName=PSoC Member=Component R4 100 Ohm
+Added Member To Class: ClassName=PSoC Member=Component R5 100 Ohm
+Added Member To Class: ClassName=PSoC Member=Component SW1 TDA04H0SB1

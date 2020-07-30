@@ -1,0 +1,12 @@
+Change Component Footprint: Designator=3.3V Old Footprint=JUMPER New Footprint=RESC0402(1005)_L
+Change Component Footprint: Designator=5V Old Footprint=JUMPER New Footprint=RESC0402(1005)_L
+Change Managed Component Library Link : Designator=3.3V Old VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F New VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F Old ItemGUID=89664D6F-9AE3-4B2F-BF30-651739FD8254 New ItemGUID=9FD41377-F2C8-4FF4-A7D3-28BA50A65007 Old RevisionGUID=532D5EE1-212E-4553-8ABC-45DD3F10106E New RevisionGUID=1E85ECE1-2A49-46E8-8D49-286F9A2264C0
+Change Managed Component Library Link : Designator=5V Old VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F New VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F Old ItemGUID=89664D6F-9AE3-4B2F-BF30-651739FD8254 New ItemGUID=9FD41377-F2C8-4FF4-A7D3-28BA50A65007 Old RevisionGUID=532D5EE1-212E-4553-8ABC-45DD3F10106E New RevisionGUID=1E85ECE1-2A49-46E8-8D49-286F9A2264C0
+Change component parameters: Designator = "3.3V" ("3.3V"); Footprint = "JUMPER"; UniqueID = "\SROTZBAX" ("\SROTZBAX")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "0402"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "5V" ("5V"); Footprint = "JUMPER"; UniqueID = "\GDMGREPW" ("\GDMGREPW")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "0402"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"

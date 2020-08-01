@@ -1,0 +1,810 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8/1/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:47:34 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc" class="file"><acronym title="C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc">C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">154</td></tr>
+</table>
+</td>
+</table><a name="ID1D4CIVIGE1KIFFPDDWPNNALU3XQ32I4P3VEJQON1X5SPGJADYUG"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXZ3MVLQQ53ZKNFEU2QHVNLAPDO1MJCTUFKC0TFPBI5OJGJLHUZVI">Clearance Constraint (Gap=8mil) (OnLayer('Top Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0JDNQYKVOBPLF45A0IFBNAFWXIOPOVLILX0VF2I1A2KAGJHQ1PTB">Clearance Constraint (Gap=7.874mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNQADORZ5ULFXGUB44AKCX1H4CCOJ2XGWPLPJFCBDQ1GOTLF0WCZH">Clearance Constraint (Gap=8mil) (OnLayer('Bottom Layer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPWCNW3H1M0IPHDLZP0VENIY2DHMVA335VWZI0XSCX0DGHD24USL">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID32C1MCRNBQ3LHPTQ3FOGG033CB3VJEEUGLAL1OPAZGLBYUQZX4CH">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">146</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDM1ZZFWJJ5NMVBRUPTPVHG53EPCWQLTIDYRI3SYJPHPPSJS1WN4NC">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUZW0GVVXFRKDIQGZKOWZWPQNOHTALV3FELGCCJRBRIPCGMHSU5C">Width Constraint (Min=3.5mil) (Max=100mil) (Preferred=15mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4J2RFLQIFONLNYL2EQHSZXLSEEKN0Z1QNCBOACOCMVOXPXAX40H">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA3UGFKB2I0O33LZPCDY13MUBOA24U5AWWV0IVMSCFLVVUUXAQVH">Minimum Annular Ring (Minimum=3mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZFH4HJF1CHDQMD1KBP5L2GSM0NEQ1AGRFT21DOGUHMG3ITMOTXUJ">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDY05TYHDY5FE1MMFDHMMOAJIGBK1YSRK0ABDTWTKM03RZNVF4NGNE">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJZDTFDQNES45HMMKNAUAFSU34BAXXW5WE5PCL5MNRLTT3CFXON1D">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBZ4RQBLC0LHWKCQFIS30OMF0DPDFCCED0W4WABB012WFPQAI1P0C">Silk To Solder Mask (Clearance=3.937mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHGQHOPLXW3P3KAI3EDCGJZFJKCJDFS1ZTUZD34OCWT2ANB00GK5E">Silk to Silk (Clearance=3.937mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH4JGNBLFDILIPAJCI01BM4A5YKBQK50FLDA4SIFAPOZ1YPP3XWTN">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDM5D3I1TASSMEMZ3YKBH0URYZSJQQNLWKLS02HSJKGRPBXKY1OUPF">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKUN02ULZMRP1GMLIIEU2P540UDZOO2VDNDHENVF4K4APQ4301XAJ">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">154</td>
+</tr>
+</table><br><a name="ID32C1MCRNBQ3LHPTQ3FOGG033CB3VJEEUGLAL1OPAZGLBYUQZX4CH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1015.488mil|Location2.X=1184.827mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1015.488mil|Location2.X=1184.827mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net 3.3V Between Pad STK-2(1050mil,2850mil) on Multi-Layer And Pad 3.3V-1(1170mil,2852.716mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1212.543mil|Location1.Y=2738.914mil|Location2.Y=2831.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1212.543mil|Location1.Y=2738.914mil|Location2.Y=2831.126mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad 3.3V-2(1170mil,2817.284mil) on Top Layer And Pad C7-2(1180mil,2768.504mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1015.488mil|Location2.X=1184.827mil|Location1.Y=2668.874mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1015.488mil|Location2.X=1184.827mil|Location1.Y=2668.874mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad STK-1(1050mil,2750mil) on Multi-Layer And Pad 5V-1(1170mil,2682.716mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1212.543mil|Location1.Y=2633.441mil|Location2.Y=2798.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1212.543mil|Location1.Y=2633.441mil|Location2.Y=2798.095mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad 5V-2(1170mil,2647.284mil) on Top Layer And Pad C7-2(1180mil,2768.504mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1030mil|Location2.X=1184.827mil|Location1.Y=2630mil|Location2.Y=2670mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1030mil|Location2.X=1184.827mil|Location1.Y=2630mil|Location2.Y=2670mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad TP1-1(1050mil,2650mil) on Top Layer And Pad 5V-2(1170mil,2647.284mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=457.543mil|Location1.Y=1291.906mil|Location2.Y=1624mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=457.543mil|Location1.Y=1291.906mil|Location2.Y=1624mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PWM_3-1(253.11mil,1590mil) on Multi-Layer And Pad C1-1(425mil,1321.496mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=538.961mil|Location1.Y=1191mil|Location2.Y=1351.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=538.961mil|Location1.Y=1191mil|Location2.Y=1351.087mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(425mil,1321.496mil) on Bottom Layer And Pad SW1-4(520mil,1220mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=457.543mil|Location1.Y=1105.409mil|Location2.Y=1288.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=457.543mil|Location1.Y=1105.409mil|Location2.Y=1288.094mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C3-2(425mil,1135mil) on Bottom Layer And Pad C1-2(425mil,1258.504mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=589.102mil|Location1.Y=1193.307mil|Location2.Y=1288.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=589.102mil|Location1.Y=1193.307mil|Location2.Y=1288.094mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C1-2(425mil,1258.504mil) on Bottom Layer And Pad U1-11(556.622mil,1199.213mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=910.194mil|Location1.Y=771.906mil|Location2.Y=831.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=910.194mil|Location1.Y=771.906mil|Location2.Y=831.087mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C2-1(788.484mil,801.496mil) on Bottom Layer And Pad C4-1(877.651mil,801.496mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=821.027mil|Location1.Y=771.906mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=821.027mil|Location1.Y=771.906mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C2-1(788.484mil,801.496mil) on Bottom Layer And Pad U1-56(794.842mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=910.194mil|Location1.Y=708.913mil|Location2.Y=768.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=910.194mil|Location1.Y=708.913mil|Location2.Y=768.095mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C2-2(788.484mil,738.504mil) on Bottom Layer And Pad C4-2(877.651mil,738.504mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=824mil|Location1.Y=431mil|Location2.Y=768.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=824mil|Location1.Y=431mil|Location2.Y=768.095mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C2-2(788.484mil,738.504mil) on Bottom Layer And Pad GND1-1(790mil,465mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=821.027mil|Location1.Y=708.913mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=755.941mil|Location2.X=821.027mil|Location1.Y=708.913mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-57(775.158mil,921.622mil) on Bottom Layer And Pad C2-2(788.484mil,738.504mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=457.543mil|Location1.Y=1042.417mil|Location2.Y=1166.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=457.543mil|Location1.Y=1042.417mil|Location2.Y=1166.5mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PWM_4-1(253.11mil,1132.5mil) on Multi-Layer And Pad C3-1(425mil,1072.008mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=589.102mil|Location1.Y=1042.417mil|Location2.Y=1185.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=392.457mil|Location2.X=589.102mil|Location1.Y=1042.417mil|Location2.Y=1185.433mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C3-1(425mil,1072.008mil) on Bottom Layer And Pad U1-10(556.622mil,1179.528mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=457.543mil|Location1.Y=1098.5mil|Location2.Y=1166.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=457.543mil|Location1.Y=1098.5mil|Location2.Y=1166.5mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad PWM_4-2(135mil,1132.5mil) on Multi-Layer And Pad C3-2(425mil,1135mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=845.107mil|Location2.X=999.361mil|Location1.Y=708.913mil|Location2.Y=768.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=845.107mil|Location2.X=999.361mil|Location1.Y=708.913mil|Location2.Y=768.095mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C4-2(877.651mil,738.504mil) on Bottom Layer And Pad C5-1(966.817mil,738.504mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=934.274mil|Location2.X=1045.858mil|Location1.Y=771.906mil|Location2.Y=1008.268mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=934.274mil|Location2.X=1045.858mil|Location1.Y=771.906mil|Location2.Y=1008.268mil|Absolute=True">Un-Routed Net Constraint: Net NetC5_2 Between Pad C5-2(966.817mil,801.496mil) on Bottom Layer And Pad U1-48(1013.378mil,1002.362mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1461.76mil|Location1.Y=1022.914mil|Location2.Y=1290.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1461.76mil|Location1.Y=1022.914mil|Location2.Y=1290.811mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U2-8(1339.331mil,1275mil) on Bottom Layer And Pad C6-1(1429.216mil,1052.505mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1928.055mil|Location1.Y=975.055mil|Location2.Y=1082.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1928.055mil|Location1.Y=975.055mil|Location2.Y=1082.095mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C6-1(1429.216mil,1052.505mil) on Bottom Layer And Pad UART-1(1894.055mil,1009.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1279.661mil|Location2.X=1461.76mil|Location1.Y=885.409mil|Location2.Y=1082.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1279.661mil|Location2.X=1461.76mil|Location1.Y=885.409mil|Location2.Y=1082.095mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Y1-2(1325mil,915mil) on Bottom Layer [Unplated] And Pad C6-1(1429.216mil,1052.505mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1928.055mil|Location1.Y=856.945mil|Location2.Y=1145.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1928.055mil|Location1.Y=856.945mil|Location2.Y=1145.087mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C6-2(1429.216mil,1115.497mil) on Bottom Layer And Pad UART-3(1894.055mil,890.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1279.661mil|Location2.X=1461.76mil|Location1.Y=1085.409mil|Location2.Y=1145.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1279.661mil|Location2.X=1461.76mil|Location1.Y=1085.409mil|Location2.Y=1145.087mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad Y1-1(1325mil,1115mil) on Bottom Layer [Unplated] And Pad C6-2(1429.216mil,1115.497mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1453mil|Location1.Y=2757mil|Location2.Y=2861.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1453mil|Location1.Y=2757mil|Location2.Y=2861.087mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C7-1(1180mil,2831.496mil) on Bottom Layer And Pad PRG-3(1430mil,2780mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=815.488mil|Location2.X=1212.543mil|Location1.Y=2801.906mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=815.488mil|Location2.X=1212.543mil|Location1.Y=2801.906mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-6(850mil,2850mil) on Multi-Layer And Pad C7-1(1180mil,2831.496mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1403mil|Location1.Y=2738.914mil|Location2.Y=2803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.457mil|Location2.X=1403mil|Location1.Y=2738.914mil|Location2.Y=2803mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C7-2(1180mil,2768.504mil) on Bottom Layer And Pad PRG-1(1380mil,2780mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1307.457mil|Location2.X=1803.866mil|Location1.Y=1470.409mil|Location2.Y=1908.293mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1307.457mil|Location2.X=1803.866mil|Location1.Y=1470.409mil|Location2.Y=1908.293mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad C8-1(1340mil,1500mil) on Bottom Layer And Pad CAN-2(1769.866mil,1874.293mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1372.858mil|Location1.Y=1409.189mil|Location2.Y=1529.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1372.858mil|Location1.Y=1409.189mil|Location2.Y=1529.591mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U2-5(1339.331mil,1425mil) on Bottom Layer And Pad C8-1(1340mil,1500mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1372.858mil|Location1.Y=1259.189mil|Location2.Y=1592.583mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1372.858mil|Location1.Y=1259.189mil|Location2.Y=1592.583mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U2-8(1339.331mil,1275mil) on Bottom Layer And Pad C8-2(1340mil,1562.992mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1853.976mil|Location2.X=1924.52mil|Location1.Y=1410.055mil|Location2.Y=1908.293mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1853.976mil|Location2.X=1924.52mil|Location1.Y=1410.055mil|Location2.Y=1908.293mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad CAN-1(1887.976mil,1874.293mil) on Multi-Layer And Pad I2C-1(1890.52mil,1444.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1476.473mil|Location2.X=1921.976mil|Location1.Y=1291.473mil|Location2.Y=1790.183mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1476.473mil|Location2.X=1921.976mil|Location1.Y=1291.473mil|Location2.Y=1790.183mil|Absolute=True">Un-Routed Net Constraint: Net CANH Between Pad J1-3(1510mil,1325mil) on Multi-Layer And Pad CAN-3(1887.976mil,1756.183mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1405mil|Location2.X=1803.866mil|Location1.Y=1360mil|Location2.Y=1790.183mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1405mil|Location2.X=1803.866mil|Location1.Y=1360mil|Location2.Y=1790.183mil|Absolute=True">Un-Routed Net Constraint: Net CANL Between Pad TP9-1(1425mil,1380mil) on Top Layer And Pad CAN-4(1769.866mil,1756.183mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.997mil|Location2.X=1993.102mil|Location1.Y=71.945mil|Location2.Y=355.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.997mil|Location2.X=1993.102mil|Location1.Y=71.945mil|Location2.Y=355.535mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Encoder-1(1479.997mil,105.945mil) on Multi-Layer And Pad RESET-1b(1959.613mil,322.047mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.997mil|Location2.X=1654.669mil|Location1.Y=190.055mil|Location2.Y=606.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1445.997mil|Location2.X=1654.669mil|Location1.Y=190.055mil|Location2.Y=606.559mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad Encoder-2(1479.997mil,224.055mil) on Multi-Layer And Pad R1-2(1630mil,575mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=847.992mil|Location2.X=1395.887mil|Location1.Y=71.945mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=847.992mil|Location2.X=1395.887mil|Location1.Y=71.945mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net ENC A Between Pad U1-53(853.898mil,921.622mil) on Bottom Layer And Pad Encoder-3(1361.887mil,105.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=828.307mil|Location2.X=1395.887mil|Location1.Y=190.055mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=828.307mil|Location2.X=1395.887mil|Location1.Y=190.055mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net ENC B Between Pad U1-54(834.213mil,921.622mil) on Bottom Layer And Pad Encoder-4(1361.887mil,224.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.622mil|Location2.X=1277.776mil|Location1.Y=71.945mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.622mil|Location2.X=1277.776mil|Location1.Y=71.945mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net ENC Z Between Pad U1-55(814.528mil,921.622mil) on Bottom Layer And Pad Encoder-5(1243.776mil,105.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=756mil|Location2.X=924mil|Location1.Y=431mil|Location2.Y=499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=756mil|Location2.X=924mil|Location1.Y=431mil|Location2.Y=499mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad GND1-1(790mil,465mil) on Multi-Layer And Pad GND2-1(890mil,465mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=856mil|Location2.X=1024mil|Location1.Y=431mil|Location2.Y=499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=856mil|Location2.X=1024mil|Location1.Y=431mil|Location2.Y=499mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad GND2-1(890mil,465mil) on Multi-Layer And Pad GND3-1(990mil,465mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.52mil|Location2.X=1928.055mil|Location1.Y=975.055mil|Location2.Y=1478.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1856.52mil|Location2.X=1928.055mil|Location1.Y=975.055mil|Location2.Y=1478.055mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad I2C-1(1890.52mil,1444.055mil) on Multi-Layer And Pad UART-1(1894.055mil,1009.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1806.41mil|Location1.Y=1094.882mil|Location2.Y=1478.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1806.41mil|Location1.Y=1094.882mil|Location2.Y=1478.055mil|Absolute=True">Un-Routed Net Constraint: Net SCL Between Pad U1-43(1013.378mil,1100.787mil) on Bottom Layer And Pad I2C-2(1772.41mil,1444.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1924.52mil|Location1.Y=1075.197mil|Location2.Y=1359.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1924.52mil|Location1.Y=1075.197mil|Location2.Y=1359.945mil|Absolute=True">Un-Routed Net Constraint: Net SDA Between Pad U1-44(1013.378mil,1081.102mil) on Bottom Layer And Pad I2C-3(1890.52mil,1325.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1543.527mil|Location1.Y=1391.473mil|Location2.Y=1474.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1543.527mil|Location1.Y=1391.473mil|Location2.Y=1474.472mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_2 Between Pad R7-2(1428.232mil,1449.803mil) on Bottom Layer And Pad J1-2(1510mil,1425mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1405mil|Location2.X=1543.527mil|Location1.Y=1291.473mil|Location2.Y=1358.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1405mil|Location2.X=1543.527mil|Location1.Y=1291.473mil|Location2.Y=1358.527mil|Absolute=True">Un-Routed Net Constraint: Net CANH Between Pad TP7-1(1425mil,1320mil) on Top Layer And Pad J1-3(1510mil,1325mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=455.764mil|Location2.X=589.102mil|Location1.Y=127.614mil|Location2.Y=1106.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=455.764mil|Location2.X=589.102mil|Location1.Y=127.614mil|Location2.Y=1106.693mil|Absolute=True">Un-Routed Net Constraint: Net P2_4 Between Pad J2-1(498.15mil,170mil) on Multi-Layer And Pad U1-6(556.622mil,1100.787mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=737.386mil|Location1.Y=127.614mil|Location2.Y=1087.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=737.386mil|Location1.Y=127.614mil|Location2.Y=1087.008mil|Absolute=True">Un-Routed Net Constraint: Net P2_3 Between Pad U1-5(556.622mil,1081.102mil) on Bottom Layer And Pad J2-2(695mil,170mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=934.236mil|Location1.Y=127.614mil|Location2.Y=1067.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=934.236mil|Location1.Y=127.614mil|Location2.Y=1067.323mil|Absolute=True">Un-Routed Net Constraint: Net P2_2 Between Pad U1-4(556.622mil,1061.417mil) on Bottom Layer And Pad J2-3(891.85mil,170mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=456mil|Location2.X=589.102mil|Location1.Y=431mil|Location2.Y=1126.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=456mil|Location2.X=589.102mil|Location1.Y=431mil|Location2.Y=1126.378mil|Absolute=True">Un-Routed Net Constraint: Net P2_5 Between Pad P2_5-1(490mil,465mil) on Multi-Layer And Pad U1-7(556.622mil,1120.472mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=624mil|Location1.Y=431mil|Location2.Y=1146.063mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=624mil|Location1.Y=431mil|Location2.Y=1146.063mil|Absolute=True">Un-Routed Net Constraint: Net P2_6 Between Pad U1-8(556.622mil,1140.158mil) on Bottom Layer And Pad P2_6-1(590mil,465mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=724mil|Location1.Y=431mil|Location2.Y=1165.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=724mil|Location1.Y=431mil|Location2.Y=1165.748mil|Absolute=True">Un-Routed Net Constraint: Net P2_7 Between Pad U1-9(556.622mil,1159.842mil) on Bottom Layer And Pad P2_7-1(690mil,465mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1269.031mil|Location2.X=1370.339mil|Location1.Y=609.11mil|Location2.Y=944.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1269.031mil|Location2.X=1370.339mil|Location1.Y=609.11mil|Location2.Y=944.591mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Pot-1(1303.031mil,643.11mil) on Multi-Layer And Pad Y1-2(1325mil,915mil) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=1337.031mil|Location1.Y=491mil|Location2.Y=1008.268mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=1337.031mil|Location1.Y=491mil|Location2.Y=1008.268mil|Absolute=True">Un-Routed Net Constraint: Net VREF Between Pad U1-1(556.622mil,1002.362mil) on Bottom Layer And Pad Pot-2(1303.031mil,525mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=1455.142mil|Location1.Y=609.11mil|Location2.Y=1027.953mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=1455.142mil|Location1.Y=609.11mil|Location2.Y=1027.953mil|Absolute=True">Un-Routed Net Constraint: Net Pot Between Pad U1-2(556.622mil,1022.047mil) on Bottom Layer And Pad Pot-3(1421.142mil,643.11mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=1455.142mil|Location1.Y=491mil|Location2.Y=1047.638mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=1455.142mil|Location1.Y=491mil|Location2.Y=1047.638mil|Absolute=True">Un-Routed Net Constraint: Net Pot2 Between Pad U1-3(556.622mil,1041.732mil) on Bottom Layer And Pad Pot-4(1421.142mil,525mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1603mil|Location1.Y=1016.142mil|Location2.Y=2853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1603mil|Location1.Y=1016.142mil|Location2.Y=2853mil|Absolute=True">Un-Routed Net Constraint: Net Reset Between Pad U1-47(1013.378mil,1022.047mil) on Bottom Layer And Pad PRG-10(1580mil,2830mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1357mil|Location2.X=1415mil|Location1.Y=2610mil|Location2.Y=2853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1357mil|Location2.X=1415mil|Location1.Y=2610mil|Location2.Y=2853mil|Absolute=True">Un-Routed Net Constraint: Net Data Between Pad PRG-2(1380mil,2830mil) on Multi-Layer And Pad TP4-1(1395mil,2630mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1407mil|Location2.X=1503mil|Location1.Y=2757mil|Location2.Y=2803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1407mil|Location2.X=1503mil|Location1.Y=2757mil|Location2.Y=2803mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PRG-3(1430mil,2780mil) on Multi-Layer And Pad PRG-5(1480mil,2780mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1407mil|Location2.X=1475mil|Location1.Y=2610mil|Location2.Y=2853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1407mil|Location2.X=1475mil|Location1.Y=2610mil|Location2.Y=2853mil|Absolute=True">Un-Routed Net Constraint: Net Clock Between Pad PRG-4(1430mil,2830mil) on Multi-Layer And Pad TP5-1(1455mil,2630mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1457mil|Location2.X=1603mil|Location1.Y=2757mil|Location2.Y=2803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1457mil|Location2.X=1603mil|Location1.Y=2757mil|Location2.Y=2803mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PRG-5(1480mil,2780mil) on Multi-Layer And Pad PRG-9(1580mil,2780mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1557mil|Location2.X=1898.055mil|Location1.Y=2516.669mil|Location2.Y=2803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1557mil|Location2.X=1898.055mil|Location1.Y=2516.669mil|Location2.Y=2803mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PRG-9(1580mil,2780mil) on Multi-Layer And Pad SPI-1(1862.559mil,2552.165mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=287.11mil|Location1.Y=2013.5mil|Location2.Y=2539mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=287.11mil|Location1.Y=2013.5mil|Location2.Y=2539mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PWM_2-1(253.11mil,2047.5mil) on Multi-Layer And Pad PWM_1-1(253.11mil,2505mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=384.512mil|Location1.Y=2471mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=384.512mil|Location1.Y=2471mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PWM_1-1(253.11mil,2505mil) on Multi-Layer And Pad STK-16(350mil,2850mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=2013.5mil|Location2.Y=2539mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=2013.5mil|Location2.Y=2539mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad PWM_2-2(135mil,2047.5mil) on Multi-Layer And Pad PWM_1-2(135mil,2505mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=1070mil|Location1.Y=2471mil|Location2.Y=2670mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=1070mil|Location1.Y=2471mil|Location2.Y=2670mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad PWM_1-2(135mil,2505mil) on Multi-Layer And Pad TP1-1(1050mil,2650mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=662.953mil|Location1.Y=1345.898mil|Location2.Y=2420.889mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=662.953mil|Location1.Y=1345.898mil|Location2.Y=2420.889mil|Absolute=True">Un-Routed Net Constraint: Net ServoPWM1 Between Pad PWM_1-3(253.11mil,2386.889mil) on Multi-Layer And Pad U1-18(657.047mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=589.102mil|Location1.Y=1212.992mil|Location2.Y=2420.889mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=589.102mil|Location1.Y=1212.992mil|Location2.Y=2420.889mil|Absolute=True">Un-Routed Net Constraint: Net Laser5V_1 Between Pad PWM_1-4(135mil,2386.889mil) on Multi-Layer And Pad U1-12(556.622mil,1218.898mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=287.11mil|Location1.Y=1556mil|Location2.Y=2081.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=287.11mil|Location1.Y=1556mil|Location2.Y=2081.5mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PWM_3-1(253.11mil,1590mil) on Multi-Layer And Pad PWM_2-1(253.11mil,2047.5mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=1556mil|Location2.Y=2081.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=1556mil|Location2.Y=2081.5mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad PWM_3-2(135mil,1590mil) on Multi-Layer And Pad PWM_2-2(135mil,2047.5mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=741.693mil|Location1.Y=1345.898mil|Location2.Y=1963.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=741.693mil|Location1.Y=1345.898mil|Location2.Y=1963.389mil|Absolute=True">Un-Routed Net Constraint: Net ServoPWM2 Between Pad PWM_2-3(253.11mil,1929.389mil) on Multi-Layer And Pad U1-22(735.787mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=589.102mil|Location1.Y=1232.677mil|Location2.Y=1963.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=589.102mil|Location1.Y=1232.677mil|Location2.Y=1963.389mil|Absolute=True">Un-Routed Net Constraint: Net Laser5V_2 Between Pad PWM_2-4(135mil,1929.389mil) on Multi-Layer And Pad U1-13(556.622mil,1238.583mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=1098.5mil|Location2.Y=1624mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=1098.5mil|Location2.Y=1624mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad PWM_4-2(135mil,1132.5mil) on Multi-Layer And Pad PWM_3-2(135mil,1590mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=781.063mil|Location1.Y=1345.898mil|Location2.Y=1505.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=781.063mil|Location1.Y=1345.898mil|Location2.Y=1505.89mil|Absolute=True">Un-Routed Net Constraint: Net ServoPWM3 Between Pad PWM_3-3(253.11mil,1471.89mil) on Multi-Layer And Pad U1-24(775.158mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=589.102mil|Location1.Y=1252.362mil|Location2.Y=1505.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=589.102mil|Location1.Y=1252.362mil|Location2.Y=1505.89mil|Absolute=True">Un-Routed Net Constraint: Net Laser5V_3 Between Pad PWM_3-4(135mil,1471.89mil) on Multi-Layer And Pad U1-14(556.622mil,1258.268mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=287.11mil|Location1.Y=641mil|Location2.Y=1166.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=287.11mil|Location1.Y=641mil|Location2.Y=1166.5mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad PWM_5-1(253.11mil,675mil) on Multi-Layer And Pad PWM_4-1(253.11mil,1132.5mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=641mil|Location2.Y=1166.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=169mil|Location1.Y=641mil|Location2.Y=1166.5mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad PWM_5-2(135mil,675mil) on Multi-Layer And Pad PWM_4-2(135mil,1132.5mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=899.173mil|Location1.Y=889.142mil|Location2.Y=1048.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=899.173mil|Location1.Y=889.142mil|Location2.Y=1048.39mil|Absolute=True">Un-Routed Net Constraint: Net ServoPWM4 Between Pad PWM_4-3(253.11mil,1014.39mil) on Multi-Layer And Pad U1-51(893.268mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=761.378mil|Location1.Y=980.39mil|Location2.Y=1410.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=761.378mil|Location1.Y=980.39mil|Location2.Y=1410.858mil|Absolute=True">Un-Routed Net Constraint: Net Laser5V_4 Between Pad PWM_4-4(135mil,1014.39mil) on Multi-Layer And Pad U1-23(755.472mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=1045.858mil|Location1.Y=522.89mil|Location2.Y=1224.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=219.11mil|Location2.X=1045.858mil|Location1.Y=522.89mil|Location2.Y=1224.803mil|Absolute=True">Un-Routed Net Constraint: Net ServoPWM5 Between Pad PWM_5-3(253.11mil,556.89mil) on Multi-Layer And Pad U1-37(1013.378mil,1218.898mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=682.638mil|Location1.Y=522.89mil|Location2.Y=1410.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=101mil|Location2.X=682.638mil|Location1.Y=522.89mil|Location2.Y=1410.858mil|Absolute=True">Un-Routed Net Constraint: Net Laser5V_5 Between Pad PWM_5-4(135mil,556.89mil) on Multi-Layer And Pad U1-19(676.732mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1680.134mil|Location2.X=1815.936mil|Location1.Y=543.441mil|Location2.Y=611.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1680.134mil|Location2.X=1815.936mil|Location1.Y=543.441mil|Location2.Y=611.441mil|Absolute=True">Un-Routed Net Constraint: Net NetR1_1 Between Pad R1-1(1704.803mil,575mil) on Bottom Layer And Pad RESET-2a(1782.448mil,577.953mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1605.331mil|Location2.X=1654.669mil|Location1.Y=543.441mil|Location2.Y=606.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1605.331mil|Location2.X=1654.669mil|Location1.Y=543.441mil|Location2.Y=606.559mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad TP2-1(1630mil,575mil) on Top Layer And Pad R1-2(1630mil,575mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1605.331mil|Location2.X=1928.055mil|Location1.Y=543.441mil|Location2.Y=924.945mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1605.331mil|Location2.X=1928.055mil|Location1.Y=543.441mil|Location2.Y=924.945mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad R1-2(1630mil,575mil) on Bottom Layer And Pad UART-3(1894.055mil,890.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=651.039mil|Location2.X=1086.559mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=651.039mil|Location2.X=1086.559mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True">Un-Routed Net Constraint: Net NetR2_1 Between Pad SW1-8(670mil,920mil) on Top Layer And Pad R2-1(1055mil,732.598mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1086.559mil|Location1.Y=782.732mil|Location2.Y=1047.638mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1086.559mil|Location1.Y=782.732mil|Location2.Y=1047.638mil|Absolute=True">Un-Routed Net Constraint: Net Dip1 Between Pad U1-46(1013.378mil,1041.732mil) on Bottom Layer And Pad R2-2(1055mil,807.402mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=601.039mil|Location2.X=729.892mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=601.039mil|Location2.X=729.892mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True">Un-Routed Net Constraint: Net NetR3_1 Between Pad SW1-7(620mil,920mil) on Top Layer And Pad R3-1(698.333mil,732.598mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=666.774mil|Location2.X=729.892mil|Location1.Y=782.732mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=666.774mil|Location2.X=729.892mil|Location1.Y=782.732mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net NetR3_2 Between Pad U1-62(676.732mil,921.622mil) on Bottom Layer And Pad R3-2(698.333mil,807.402mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=551.039mil|Location2.X=640.726mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=551.039mil|Location2.X=640.726mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True">Un-Routed Net Constraint: Net NetR4_1 Between Pad SW1-6(570mil,920mil) on Top Layer And Pad R4-1(609.167mil,732.598mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=577.608mil|Location2.X=662.953mil|Location1.Y=782.732mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=577.608mil|Location2.X=662.953mil|Location1.Y=782.732mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net NetR4_2 Between Pad R4-2(609.167mil,807.402mil) on Bottom Layer And Pad U1-63(657.047mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=488.441mil|Location2.X=551.559mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=488.441mil|Location2.X=551.559mil|Location1.Y=707.929mil|Location2.Y=949mil|Absolute=True">Un-Routed Net Constraint: Net NetR5_1 Between Pad R5-1(520mil,732.598mil) on Bottom Layer And Pad SW1-5(520mil,920mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=488.441mil|Location2.X=643.268mil|Location1.Y=782.732mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=488.441mil|Location2.X=643.268mil|Location1.Y=782.732mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net NetR5_2 Between Pad R5-2(520mil,807.402mil) on Bottom Layer And Pad U1-64(637.362mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=670.331mil|Location2.X=1415mil|Location1.Y=1448.441mil|Location2.Y=2650mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=670.331mil|Location2.X=1415mil|Location1.Y=1448.441mil|Location2.Y=2650mil|Absolute=True">Un-Routed Net Constraint: Net Data Between Pad R6-1(695mil,1480mil) on Bottom Layer And Pad TP4-1(1395mil,2630mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=670.331mil|Location2.X=719.669mil|Location1.Y=1345.898mil|Location2.Y=1511.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=670.331mil|Location2.X=719.669mil|Location1.Y=1345.898mil|Location2.Y=1511.559mil|Absolute=True">Un-Routed Net Constraint: Net Data Between Pad R6-1(695mil,1480mil) on Bottom Layer And Pad U1-20(696.417mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=745.134mil|Location2.X=820.433mil|Location1.Y=1345.898mil|Location2.Y=1511.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=745.134mil|Location2.X=820.433mil|Location1.Y=1345.898mil|Location2.Y=1511.559mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad R6-2(769.803mil,1480mil) on Bottom Layer And Pad U1-26(814.528mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1459.791mil|Location1.Y=1350.331mil|Location2.Y=1400mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1396.673mil|Location2.X=1459.791mil|Location1.Y=1350.331mil|Location2.Y=1400mil|Absolute=True">Un-Routed Net Constraint: Net CANL Between Pad TP9-1(1425mil,1380mil) on Top Layer And Pad R7-1(1428.232mil,1375mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1459.791mil|Location1.Y=1350.331mil|Location2.Y=1399.669mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1459.791mil|Location1.Y=1350.331mil|Location2.Y=1399.669mil|Absolute=True">Un-Routed Net Constraint: Net CANL Between Pad U2-6(1339.331mil,1375mil) on Bottom Layer And Pad R7-1(1428.232mil,1375mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1926.125mil|Location2.X=1993.102mil|Location1.Y=288.559mil|Location2.Y=611.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1926.125mil|Location2.X=1993.102mil|Location1.Y=288.559mil|Location2.Y=611.441mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad RESET-1b(1959.613mil,322.047mil) on Multi-Layer And Pad RESET-1a(1959.613mil,577.953mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1860.055mil|Location2.X=1993.102mil|Location1.Y=544.465mil|Location2.Y=1043.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1860.055mil|Location2.X=1993.102mil|Location1.Y=544.465mil|Location2.Y=1043.055mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad UART-1(1894.055mil,1009.055mil) on Multi-Layer And Pad RESET-1a(1959.613mil,577.953mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1815.936mil|Location1.Y=288.559mil|Location2.Y=1027.953mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1815.936mil|Location1.Y=288.559mil|Location2.Y=1027.953mil|Absolute=True">Un-Routed Net Constraint: Net Reset Between Pad U1-47(1013.378mil,1022.047mil) on Bottom Layer And Pad RESET-2b(1782.448mil,322.047mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=847.992mil|Location2.X=1898.055mil|Location1.Y=1345.898mil|Location2.Y=2469.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=847.992mil|Location2.X=1898.055mil|Location1.Y=1345.898mil|Location2.Y=2469.551mil|Absolute=True">Un-Routed Net Constraint: Net MISO Between Pad U1-28(853.898mil,1378.378mil) on Bottom Layer And Pad SPI-2(1862.559mil,2434.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=887.362mil|Location2.X=1898.055mil|Location1.Y=1345.898mil|Location2.Y=2351.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=887.362mil|Location2.X=1898.055mil|Location1.Y=1345.898mil|Location2.Y=2351.441mil|Absolute=True">Un-Routed Net Constraint: Net SC1 Between Pad U1-30(893.268mil,1378.378mil) on Bottom Layer And Pad SPI-3(1862.559mil,2315.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=926.732mil|Location2.X=1898.055mil|Location1.Y=1345.898mil|Location2.Y=2233.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=926.732mil|Location2.X=1898.055mil|Location1.Y=1345.898mil|Location2.Y=2233.331mil|Absolute=True">Un-Routed Net Constraint: Net SC3 Between Pad U1-32(932.638mil,1378.378mil) on Bottom Layer And Pad SPI-4(1862.559mil,2197.835mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=828.307mil|Location2.X=1779.945mil|Location1.Y=1345.898mil|Location2.Y=2587.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=828.307mil|Location2.X=1779.945mil|Location1.Y=1345.898mil|Location2.Y=2587.661mil|Absolute=True">Un-Routed Net Constraint: Net MOSI Between Pad U1-27(834.213mil,1378.378mil) on Bottom Layer And Pad SPI-5(1744.449mil,2552.165mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=867.677mil|Location2.X=1779.945mil|Location1.Y=1345.898mil|Location2.Y=2469.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=867.677mil|Location2.X=1779.945mil|Location1.Y=1345.898mil|Location2.Y=2469.551mil|Absolute=True">Un-Routed Net Constraint: Net SCK Between Pad U1-29(873.583mil,1378.378mil) on Bottom Layer And Pad SPI-6(1744.449mil,2434.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=907.047mil|Location2.X=1779.945mil|Location1.Y=1345.898mil|Location2.Y=2351.441mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=907.047mil|Location2.X=1779.945mil|Location1.Y=1345.898mil|Location2.Y=2351.441mil|Absolute=True">Un-Routed Net Constraint: Net SC2 Between Pad U1-31(912.953mil,1378.378mil) on Bottom Layer And Pad SPI-7(1744.449mil,2315.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1779.945mil|Location1.Y=1291.732mil|Location2.Y=2233.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1779.945mil|Location1.Y=1291.732mil|Location2.Y=2233.331mil|Absolute=True">Un-Routed Net Constraint: Net SC4 Between Pad U1-33(1013.378mil,1297.638mil) on Bottom Layer And Pad SPI-8(1744.449mil,2197.835mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=515.488mil|Location2.X=684.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=515.488mil|Location2.X=684.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-12(550mil,2850mil) on Multi-Layer And Pad STK-10(650mil,2850mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=615.488mil|Location2.X=784.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=615.488mil|Location2.X=784.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-10(650mil,2850mil) on Multi-Layer And Pad STK-8(750mil,2850mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=415.488mil|Location2.X=584.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=415.488mil|Location2.X=584.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net +24 Between Pad STK-13(450mil,2750mil) on Multi-Layer And Pad STK-11(550mil,2750mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=515.488mil|Location2.X=684.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=515.488mil|Location2.X=684.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net +24 Between Pad STK-11(550mil,2750mil) on Multi-Layer And Pad STK-9(650mil,2750mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=415.488mil|Location2.X=584.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=415.488mil|Location2.X=584.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-14(450mil,2850mil) on Multi-Layer And Pad STK-12(550mil,2850mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=315.488mil|Location2.X=484.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=315.488mil|Location2.X=484.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net +24 Between Pad STK-15(350mil,2750mil) on Multi-Layer And Pad STK-13(450mil,2750mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=315.488mil|Location2.X=484.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=315.488mil|Location2.X=484.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-16(350mil,2850mil) on Multi-Layer And Pad STK-14(450mil,2850mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=915.488mil|Location2.X=1372.858mil|Location1.Y=1309.189mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=915.488mil|Location2.X=1372.858mil|Location1.Y=1309.189mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net CANH Between Pad STK-3(950mil,2750mil) on Multi-Layer And Pad U2-7(1339.331mil,1325mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=915.488mil|Location2.X=1372.858mil|Location1.Y=1359.189mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=915.488mil|Location2.X=1372.858mil|Location1.Y=1359.189mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net CANL Between Pad STK-4(950mil,2850mil) on Multi-Layer And Pad U2-6(1339.331mil,1375mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=715.488mil|Location2.X=884.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=715.488mil|Location2.X=884.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net +24 Between Pad STK-7(750mil,2750mil) on Multi-Layer And Pad STK-5(850mil,2750mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=715.488mil|Location2.X=884.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=715.488mil|Location2.X=884.512mil|Location1.Y=2815.488mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-8(750mil,2850mil) on Multi-Layer And Pad STK-6(850mil,2850mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=815.488mil|Location2.X=970mil|Location1.Y=2630mil|Location2.Y=2884.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=815.488mil|Location2.X=970mil|Location1.Y=2630mil|Location2.Y=2884.512mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad STK-6(850mil,2850mil) on Multi-Layer And Pad TP3-1(950mil,2650mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=615.488mil|Location2.X=784.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=615.488mil|Location2.X=784.512mil|Location1.Y=2715.488mil|Location2.Y=2784.512mil|Absolute=True">Un-Routed Net Constraint: Net +24 Between Pad STK-9(650mil,2750mil) on Multi-Layer And Pad STK-7(750mil,2750mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=601.039mil|Location2.X=688.961mil|Location1.Y=1191mil|Location2.Y=1249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=601.039mil|Location2.X=688.961mil|Location1.Y=1191mil|Location2.Y=1249mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-2(620mil,1220mil) on Top Layer And Pad SW1-1(670mil,1220mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=651.039mil|Location2.X=781.063mil|Location1.Y=889.142mil|Location2.Y=1249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=651.039mil|Location2.X=781.063mil|Location1.Y=889.142mil|Location2.Y=1249mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-1(670mil,1220mil) on Top Layer And Pad U1-57(775.158mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=551.039mil|Location2.X=638.961mil|Location1.Y=1191mil|Location2.Y=1249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=551.039mil|Location2.X=638.961mil|Location1.Y=1191mil|Location2.Y=1249mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-3(570mil,1220mil) on Top Layer And Pad SW1-2(620mil,1220mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=601.039mil|Location2.X=643.268mil|Location1.Y=1191mil|Location2.Y=1410.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=601.039mil|Location2.X=643.268mil|Location1.Y=1191mil|Location2.Y=1410.858mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-2(620mil,1220mil) on Top Layer And Pad U1-17(637.362mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=501.039mil|Location2.X=588.961mil|Location1.Y=1191mil|Location2.Y=1249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=501.039mil|Location2.X=588.961mil|Location1.Y=1191mil|Location2.Y=1249mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-4(520mil,1220mil) on Top Layer And Pad SW1-3(570mil,1220mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=589.102mil|Location1.Y=1173.622mil|Location2.Y=1249mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=589.102mil|Location1.Y=1173.622mil|Location2.Y=1249mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-10(556.622mil,1179.528mil) on Bottom Layer And Pad SW1-3(570mil,1220mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=710.197mil|Location2.X=1475mil|Location1.Y=1345.898mil|Location2.Y=2650mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=710.197mil|Location2.X=1475mil|Location1.Y=1345.898mil|Location2.Y=2650mil|Absolute=True">Un-Routed Net Constraint: Net Clock Between Pad U1-21(716.102mil,1378.378mil) on Bottom Layer And Pad TP5-1(1455mil,2630mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1225mil|Location1.Y=1255mil|Location2.Y=1295mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1225mil|Location1.Y=1255mil|Location2.Y=1295mil|Absolute=True">Un-Routed Net Constraint: Net CANTX Between Pad U2-1(1130.669mil,1275mil) on Bottom Layer And Pad TP6-1(1205mil,1275mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1445mil|Location1.Y=1300mil|Location2.Y=1340.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1305.803mil|Location2.X=1445mil|Location1.Y=1300mil|Location2.Y=1340.811mil|Absolute=True">Un-Routed Net Constraint: Net CANH Between Pad U2-7(1339.331mil,1325mil) on Bottom Layer And Pad TP7-1(1425mil,1320mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1225mil|Location1.Y=1405mil|Location2.Y=1445mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1225mil|Location1.Y=1405mil|Location2.Y=1445mil|Absolute=True">Un-Routed Net Constraint: Net CANRX Between Pad U2-4(1130.669mil,1425mil) on Bottom Layer And Pad TP8-1(1205mil,1425mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=820.433mil|Location1.Y=1193.307mil|Location2.Y=1410.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=524.142mil|Location2.X=820.433mil|Location1.Y=1193.307mil|Location2.Y=1410.858mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U1-11(556.622mil,1199.213mil) on Bottom Layer And Pad U1-26(814.528mil,1378.378mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.622mil|Location2.X=1164.197mil|Location1.Y=1345.898mil|Location2.Y=1410.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=808.622mil|Location2.X=1164.197mil|Location1.Y=1345.898mil|Location2.Y=1410.858mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U1-26(814.528mil,1378.378mil) on Bottom Layer And Pad U2-3(1130.669mil,1375mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1164.197mil|Location1.Y=1173.622mil|Location2.Y=1440.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1164.197mil|Location1.Y=1173.622mil|Location2.Y=1440.811mil|Absolute=True">Un-Routed Net Constraint: Net CANRX Between Pad U1-39(1013.378mil,1179.528mil) on Bottom Layer And Pad U2-4(1130.669mil,1425mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1164.197mil|Location1.Y=1153.937mil|Location2.Y=1290.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1164.197mil|Location1.Y=1153.937mil|Location2.Y=1290.811mil|Absolute=True">Un-Routed Net Constraint: Net CANTX Between Pad U1-40(1013.378mil,1159.842mil) on Bottom Layer And Pad U2-1(1130.669mil,1275mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1189.236mil|Location1.Y=885.409mil|Location2.Y=1067.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=980.898mil|Location2.X=1189.236mil|Location1.Y=885.409mil|Location2.Y=1067.323mil|Absolute=True">Un-Routed Net Constraint: Net Oscillator Between Pad U1-45(1013.378mil,1061.417mil) on Bottom Layer And Pad Y1-3(1143.898mil,915mil) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=769.252mil|Location2.X=938.543mil|Location1.Y=889.142mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=769.252mil|Location2.X=938.543mil|Location1.Y=889.142mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-57(775.158mil,921.622mil) on Bottom Layer And Pad U1-49(932.638mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=926.732mil|Location2.X=1370.339mil|Location1.Y=885.409mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=926.732mil|Location2.X=1370.339mil|Location1.Y=885.409mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-49(932.638mil,921.622mil) on Bottom Layer And Pad Y1-2(1325mil,915mil) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=788.937mil|Location2.X=918.858mil|Location1.Y=889.142mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=788.937mil|Location2.X=918.858mil|Location1.Y=889.142mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U1-56(794.842mil,921.622mil) on Bottom Layer And Pad U1-50(912.953mil,921.622mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=907.047mil|Location2.X=1189.236mil|Location1.Y=889.142mil|Location2.Y=1144.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=907.047mil|Location2.X=1189.236mil|Location1.Y=889.142mil|Location2.Y=1144.591mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U1-50(912.953mil,921.622mil) on Bottom Layer And Pad Y1-4(1143.898mil,1115mil) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=749.567mil|Location2.X=1928.055mil|Location1.Y=738.835mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=749.567mil|Location2.X=1928.055mil|Location1.Y=738.835mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net RXD Between Pad U1-58(755.472mil,921.622mil) on Bottom Layer And Pad UART-5(1894.055mil,772.835mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=729.882mil|Location2.X=1809.945mil|Location1.Y=856.945mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=729.882mil|Location2.X=1809.945mil|Location1.Y=856.945mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net TXD Between Pad U1-59(735.787mil,921.622mil) on Bottom Layer And Pad UART-4(1775.945mil,890.945mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=710.197mil|Location2.X=1809.945mil|Location1.Y=889.142mil|Location2.Y=1043.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=710.197mil|Location2.X=1809.945mil|Location1.Y=889.142mil|Location2.Y=1043.055mil|Absolute=True">Un-Routed Net Constraint: Net CTS Between Pad U1-60(716.102mil,921.622mil) on Bottom Layer And Pad UART-2(1775.945mil,1009.055mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=690.512mil|Location2.X=1809.945mil|Location1.Y=738.835mil|Location2.Y=954.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=690.512mil|Location2.X=1809.945mil|Location1.Y=738.835mil|Location2.Y=954.102mil|Absolute=True">Un-Routed Net Constraint: Net RTS Between Pad U1-61(696.417mil,921.622mil) on Bottom Layer And Pad UART-6(1775.945mil,772.835mil) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1372.858mil|Location1.Y=1259.189mil|Location2.Y=1340.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1372.858mil|Location1.Y=1259.189mil|Location2.Y=1340.811mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U2-2(1130.669mil,1325mil) on Bottom Layer And Pad U2-8(1339.331mil,1275mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1372.858mil|Location1.Y=1359.189mil|Location2.Y=1440.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1372.858mil|Location1.Y=1359.189mil|Location2.Y=1440.811mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U2-3(1130.669mil,1375mil) on Bottom Layer And Pad U2-5(1339.331mil,1425mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1189.236mil|Location1.Y=1085.409mil|Location2.Y=1390.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1097.142mil|Location2.X=1189.236mil|Location1.Y=1085.409mil|Location2.Y=1390.811mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad U2-3(1130.669mil,1375mil) on Bottom Layer And Pad Y1-4(1143.898mil,1115mil) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1098.559mil|Location2.X=1370.339mil|Location1.Y=1085.409mil|Location2.Y=1144.591mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1098.559mil|Location2.X=1370.339mil|Location1.Y=1085.409mil|Location2.Y=1144.591mil|Absolute=True">Un-Routed Net Constraint: Net VCC Between Pad Y1-4(1143.898mil,1115mil) on Bottom Layer [Unplated] And Pad Y1-1(1325mil,1115mil) on Bottom Layer [Unplated] </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJZDTFDQNES45HMMKNAUAFSU34BAXXW5WE5PCL5MNRLTT3CFXON1D"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=389.863mil|Location2.X=395.05mil|Location1.Y=1287.407mil|Location2.Y=1292.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=389.863mil|Location2.X=395.05mil|Location1.Y=1287.407mil|Location2.Y=1292.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C1-1(425mil,1321.496mil) on Bottom Layer And Pad C1-2(425mil,1258.504mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=753.347mil|Location2.X=758.534mil|Location1.Y=767.407mil|Location2.Y=772.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=753.347mil|Location2.X=758.534mil|Location1.Y=767.407mil|Location2.Y=772.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C2-1(788.484mil,801.496mil) on Bottom Layer And Pad C2-2(788.484mil,738.504mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=389.863mil|Location2.X=395.05mil|Location1.Y=1100.91mil|Location2.Y=1106.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=389.863mil|Location2.X=395.05mil|Location1.Y=1100.91mil|Location2.Y=1106.097mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C3-1(425mil,1072.008mil) on Bottom Layer And Pad C3-2(425mil,1135mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=842.514mil|Location2.X=847.701mil|Location1.Y=767.407mil|Location2.Y=772.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=842.514mil|Location2.X=847.701mil|Location1.Y=767.407mil|Location2.Y=772.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C4-1(877.651mil,801.496mil) on Bottom Layer And Pad C4-2(877.651mil,738.504mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=931.681mil|Location2.X=936.867mil|Location1.Y=767.407mil|Location2.Y=772.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=931.681mil|Location2.X=936.867mil|Location1.Y=767.407mil|Location2.Y=772.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C5-1(966.817mil,738.504mil) on Bottom Layer And Pad C5-2(966.817mil,801.496mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1394.08mil|Location2.X=1399.267mil|Location1.Y=1081.407mil|Location2.Y=1086.594mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1394.08mil|Location2.X=1399.267mil|Location1.Y=1081.407mil|Location2.Y=1086.594mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C6-1(1429.216mil,1052.505mil) on Bottom Layer And Pad C6-2(1429.216mil,1115.497mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1144.863mil|Location2.X=1150.05mil|Location1.Y=2797.407mil|Location2.Y=2802.593mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1144.863mil|Location2.X=1150.05mil|Location1.Y=2797.407mil|Location2.Y=2802.593mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C7-1(1180mil,2831.496mil) on Bottom Layer And Pad C7-2(1180mil,2768.504mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1304.863mil|Location2.X=1310.05mil|Location1.Y=1528.902mil|Location2.Y=1534.09mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1304.863mil|Location2.X=1310.05mil|Location1.Y=1528.902mil|Location2.Y=1534.09mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (3.811mil &lt; 3.937mil) Between Pad C8-1(1340mil,1500mil) on Bottom Layer And Pad C8-2(1340mil,1562.992mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

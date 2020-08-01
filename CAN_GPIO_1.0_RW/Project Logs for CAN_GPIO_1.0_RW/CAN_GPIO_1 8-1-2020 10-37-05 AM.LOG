@@ -1,0 +1,9 @@
+Added Component: Designator=GND1(Test Point Through-hole)
+Added Component: Designator=GND2(Test Point Through-hole)
+Added Component: Designator=GND3(Test Point Through-hole)
+Added Pin To Net: NetName=GND Pin=GND1-1
+Added Pin To Net: NetName=GND Pin=GND2-1
+Added Pin To Net: NetName=GND Pin=GND3-1
+Added Member To Class: ClassName=Connectors Member=Component GND1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component GND2 Test Point
+Added Member To Class: ClassName=Connectors Member=Component GND3 Test Point

@@ -1,0 +1,36 @@
+Change Component Designator: OldDesignator=F1 NewDesignator=SH1
+Change Component Designator: OldDesignator=F2 NewDesignator=SH2
+Change Component Designator: OldDesignator=F3 NewDesignator=SH3
+Change Component Designator: OldDesignator=F4 NewDesignator=SH4
+Added Component: Designator=F1(BOUR-MF-NSMF150-2_V)
+Add component (AddParameter): Name = "Brand"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "100A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating (Max)"; Value = "100A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating - Max"; Value = "100A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://www.bourns.com/docs/Product-Datasheets/mfnsmf.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. T, 08/2015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dimensions"; Value = "3.4mmLx1.8mmWx0.7mmH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Factory Pack Quantity"; Value = "3000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Hold Current"; Value = "1.5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.bourns.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Voltage"; Value = "6VDC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Voltage DC"; Value = "6V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range"; Value = "-40Cto+85C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "1206(3216metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Surface Mount Device, Body 3.2 x 1.6 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "MF-NSMF150-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "ResettableFuses-PPTC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "130mOhms"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Details"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "MF-NSMF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tradename"; Value = "Multifuse"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Trip Current"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "PTCResettableFuses"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Net3.3V_2 Pin=F1-1
+Added Pin To Net: NetName=VCC Pin=F1-2
+Added Member To Class: ClassName=Connectors Member=Component F1 250mA

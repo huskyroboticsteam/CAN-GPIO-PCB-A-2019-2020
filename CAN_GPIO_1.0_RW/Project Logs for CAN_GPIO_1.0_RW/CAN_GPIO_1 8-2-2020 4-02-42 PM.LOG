@@ -1,0 +1,22 @@
+Removed Member From Class: ClassName=Connectors Member=CAN
+Removed Member From Class: ClassName=Connectors Member=SH1
+Change Component Footprint: Designator=ADC Pins Old Footprint=691101710003 New Footprint=691213710003
+Change Component Comment : Designator=ADC Pins Old Comment=691101710003 New Comment=691213710003
+Change Component Designator: OldDesignator=Vcc  NewDesignator=Vcc
+Change Component Designator: OldDesignator=Vcc NewDesignator=Vcc 
+Change Managed Component Library Link : Designator=ADC Pins Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=216C8A69-39A3-4394-838B-811A107DE67D New ItemGUID=E851B264-FEDE-4897-AB8D-6468E5CA65B5 Old RevisionGUID=EEBE375F-A94D-47D2-BC13-CE0131BB8E1E New RevisionGUID=2754F5FF-E22B-48E9-9E21-1A62DF63892D
+Change component parameters: Designator = "ADC Pins" ("ADC Pins"); Footprint = "691101710003"; UniqueID = "\DIXQTQZA" ("\DIXQTQZA")
+Change component parameters (AddParameter): Name = "Datasheet URL"; Value = "http://katalog.we-online.de/em/datasheet/6912137100xx.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40to105degC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Reference"; Value = "691213710003"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Box"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "691213710003"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pin Number"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pitch"; Value = "5.00mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Connectors Member=Component CAN  Molex Micro
+Added Member To Class: ClassName=Connectors Member=Component F1 250mA
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

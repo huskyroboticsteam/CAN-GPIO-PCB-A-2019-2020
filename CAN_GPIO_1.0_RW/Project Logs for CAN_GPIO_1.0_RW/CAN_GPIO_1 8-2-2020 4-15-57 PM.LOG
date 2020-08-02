@@ -1,0 +1,12 @@
+Change Component Footprint: Designator=ADC Pins Old Footprint=691213710003 New Footprint=PHOENIX_1985836
+Change Component Comment : Designator=ADC Pins Old Comment=691213710003 New Comment=1985836
+Change Managed Component Library Link : Designator=ADC Pins Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=E851B264-FEDE-4897-AB8D-6468E5CA65B5 New ItemGUID= Old RevisionGUID=2754F5FF-E22B-48E9-9E21-1A62DF63892D New RevisionGUID=
+Change component parameters: Designator = "ADC Pins" ("ADC Pins"); Footprint = "691213710003"; UniqueID = "\LGCCKBTO" ("\LGCCKBTO")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Phoenix Contact"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "1985836"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/1985836/Phoenix%20Contact/view-part/2770711/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

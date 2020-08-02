@@ -1,0 +1,14 @@
+Removed Member From Class: ClassName=LEDs Member=Breakout CAN
+Removed Member From Class: ClassName=Connectors Member=J2
+Change Component Footprint: Designator=CAN Old Footprint=0805_A New Footprint=0805_A
+Change Component Footprint: Designator=Debug Old Footprint=0805_A New Footprint=0805_A
+Change Component Footprint: Designator=Fault Old Footprint=0805_A New Footprint=0805_A
+Change Component Footprint: Designator=Power Old Footprint=0805_A New Footprint=0805_A
+Change Component Footprint: Designator=STK Old Footprint=SMTC-SSQ-108-02-X-D New Footprint=SMTC-SSQ-108-02-X-D
+Change Component Designator: OldDesignator=STK NewDesignator=STD
+Added Member To Class: ClassName=LEDs Member=Component CAN LED
+Added Member To Class: ClassName=Connectors Member=Component J1 691101710003
+Added Room: Name=CAN
+Added Room: Name=Connectors
+Added Room: Name=LEDs
+Added Room: Name=PSoC

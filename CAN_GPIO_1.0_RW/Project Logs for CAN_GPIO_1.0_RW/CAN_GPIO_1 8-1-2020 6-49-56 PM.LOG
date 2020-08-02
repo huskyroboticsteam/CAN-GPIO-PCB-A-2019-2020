@@ -1,0 +1,11 @@
+Removed Member From Class: ClassName=Connectors Member=CAN LED
+Change Component Designator: OldDesignator=TP1 NewDesignator=Vcc1
+Change Component Designator: OldDesignator=TP2 NewDesignator=Vcc2
+Change Component Designator: OldDesignator=TP3 NewDesignator=GND
+Change Component Designator: OldDesignator=TP4 NewDesignator=Data
+Change Component Designator: OldDesignator=TP5 NewDesignator=CLK
+Change Component Designator: OldDesignator=TP6 NewDesignator=Tx
+Change Component Designator: OldDesignator=TP7 NewDesignator=CANH
+Change Component Designator: OldDesignator=TP8 NewDesignator=Rx
+Change Component Designator: OldDesignator=TP9 NewDesignator=CANL
+Added Member To Class: ClassName=Connectors Member=Component CAN Molex Micro

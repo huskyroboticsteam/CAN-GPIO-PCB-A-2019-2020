@@ -1,0 +1,172 @@
+Removed Pin From Net: NetName=VCC Pin=3.3V-2
+Removed Pin From Net: NetName=VCC Pin=5V-2
+Removed Pin From Net: NetName=Laser5V_2 Pin=U1-13
+Removed Pin From Net: NetName=Laser5V_4 Pin=U1-23
+Removed Pin From Net: NetName=GND Pin=UART-1
+Removed Pin From Net: NetName=VCC Pin=UART-3
+Removed Pin From Net: NetName=TXD Pin=UART-4
+Removed Pin From Net: NetName=RXD Pin=UART-5
+Removed Member From Class: ClassName=Connectors Member=UART
+Change Component Designator: OldDesignator=CAN NewDesignator=Breakout CAN
+Change Component Designator: OldDesignator=J1 NewDesignator=J2
+Change Component Designator: OldDesignator=J2 NewDesignator=J1
+Change Component Designator: OldDesignator=Pot NewDesignator=Pot/PWM
+Change Component Designator: OldDesignator=PWM_1 NewDesignator=PWM_1 x 2
+Change Component Designator: OldDesignator=PWM_2 NewDesignator=PWM_2 x 2
+Change Component Designator: OldDesignator=PWM_3 NewDesignator=PWM_3 x 2
+Change Component Designator: OldDesignator=PWM_4 NewDesignator=PWM_4 x 2
+Added Component: Designator=CAN(0805_A)
+Add component (AddParameter): Name = "Color"; Value = "Blue"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0805_A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "150080SS75000"; VariantName = "[No Variations]"
+Added Component: Designator=D+_P13_0(Test Point Through-hole)
+Added Component: Designator=D-_P13_1(Test Point Through-hole)
+Added Component: Designator=Debug(0805_A)
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0805_A"; VariantName = "[No Variations]"
+Added Component: Designator=Fault(0805_A)
+Add component (AddParameter): Name = "Color"; Value = "Super Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.com/led/datasheet/150080SS75000.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0805_A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "150080SS75000"; VariantName = "[No Variations]"
+Added Component: Designator=P3_5(Test Point Through-hole)
+Added Component: Designator=P3_7(Test Point Through-hole)
+Added Component: Designator=P5_1(Test Point Through-hole)
+Added Component: Designator=P6_1(Test Point Through-hole)
+Added Component: Designator=P6_5_P12_1(Test Point Through-hole)
+Added Component: Designator=P7_1(Test Point Through-hole)
+Added Component: Designator=Power(0805_A)
+Add component (AddParameter): Name = "Color"; Value = "Yellow"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0805_A"; VariantName = "[No Variations]"
+Added Component: Designator=R8(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "200 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "300 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "300 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R11(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "300 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=STK(SMTC-SSQ-108-02-X-D)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.samtec.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.samtec.com/documents/webfiles/pdf/SSQ_TH.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.samtec.com/documents/webfiles/cpdf/SSQ-1XX-XX-XXX-X-XX-XXX-XX-X-MKT.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "F-214"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through-hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Assembly, Socket Strip .025[0.64] SQ Tail"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SSQ-108-02-X-D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "BD, 6/1987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "SSQ-108-02-G-D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range"; Value = "-55 to 125 degC"; VariantName = "[No Variations]"
+Added Component: Designator=UART/PWM(microfit 4 pin)
+Added Component: Designator=VBUS_P13_2(Test Point Through-hole)
+Added Pin To Net: NetName=GND Pin=Power-1
+Added Pin To Net: NetName=VCC Pin=R8-1
+Added Pin To Net: NetName=VCC Pin=R9-1
+Added Pin To Net: NetName=VCC Pin=R10-1
+Added Pin To Net: NetName=VCC Pin=R11-1
+Added Pin To Net: NetName=5V Pin=STK-1
+Added Pin To Net: NetName=3.3V Pin=STK-2
+Added Pin To Net: NetName=CANH Pin=STK-3
+Added Pin To Net: NetName=CANL Pin=STK-4
+Added Pin To Net: NetName=+24 Pin=STK-5
+Added Pin To Net: NetName=GND Pin=STK-6
+Added Pin To Net: NetName=+24 Pin=STK-7
+Added Pin To Net: NetName=GND Pin=STK-8
+Added Pin To Net: NetName=+24 Pin=STK-9
+Added Pin To Net: NetName=GND Pin=STK-10
+Added Pin To Net: NetName=+24 Pin=STK-11
+Added Pin To Net: NetName=GND Pin=STK-12
+Added Pin To Net: NetName=+24 Pin=STK-13
+Added Pin To Net: NetName=GND Pin=STK-14
+Added Pin To Net: NetName=+24 Pin=STK-15
+Added Pin To Net: NetName=GND Pin=STK-16
+Added Pin To Net: NetName=Laser5V_4 Pin=U1-15
+Added Pin To Net: NetName=Laser5V_2 Pin=U1-60
+Added Pin To Net: NetName=GND Pin=UART/PWM-1
+Added Pin To Net: NetName=VCC Pin=UART/PWM-2
+Added Pin To Net: NetName=RXD Pin=UART/PWM-3
+Added Pin To Net: NetName=TXD Pin=UART/PWM-4
+Change Net Name : Old Net Name=NetJ1_2 New Net Name=NetJ2_2
+Added Pin To Net: NetName=D+_P13_0 Pin=D+_P13_0-1
+Added Pin To Net: NetName=D+_P13_0 Pin=U1-34
+Added Net: Name=D+_P13_0
+Added Pin To Net: NetName=D-_P13_1 Pin=D-_P13_1-1
+Added Pin To Net: NetName=D-_P13_1 Pin=U1-35
+Added Net: Name=D-_P13_1
+Added Pin To Net: NetName=LED CAN Pin=CAN-1
+Added Pin To Net: NetName=LED CAN Pin=U1-41
+Added Net: Name=LED CAN
+Added Pin To Net: NetName=LED Debug Pin=Debug-1
+Added Pin To Net: NetName=LED Debug Pin=U1-42
+Added Net: Name=LED Debug
+Added Pin To Net: NetName=LED Fault Pin=Fault-1
+Added Pin To Net: NetName=LED Fault Pin=U1-61
+Added Net: Name=LED Fault
+Added Pin To Net: NetName=Net3.3V_2 Pin=3.3V-2
+Added Pin To Net: NetName=Net3.3V_2 Pin=5V-2
+Added Net: Name=Net3.3V_2
+Added Pin To Net: NetName=NetCAN_2 Pin=CAN-2
+Added Pin To Net: NetName=NetCAN_2 Pin=R8-2
+Added Net: Name=NetCAN_2
+Added Pin To Net: NetName=NetDebug_2 Pin=Debug-2
+Added Pin To Net: NetName=NetDebug_2 Pin=R10-2
+Added Net: Name=NetDebug_2
+Added Pin To Net: NetName=NetFault_2 Pin=Fault-2
+Added Pin To Net: NetName=NetFault_2 Pin=R11-2
+Added Net: Name=NetFault_2
+Added Pin To Net: NetName=NetPower_2 Pin=Power-2
+Added Pin To Net: NetName=NetPower_2 Pin=R9-2
+Added Net: Name=NetPower_2
+Added Pin To Net: NetName=P3_5 Pin=P3_5-1
+Added Pin To Net: NetName=P3_5 Pin=U1-23
+Added Net: Name=P3_5
+Added Pin To Net: NetName=P3_7 Pin=P3_7-1
+Added Pin To Net: NetName=P3_7 Pin=U1-25
+Added Net: Name=P3_7
+Added Pin To Net: NetName=P5_1 Pin=P5_1-1
+Added Pin To Net: NetName=P5_1 Pin=U1-52
+Added Net: Name=P5_1
+Added Pin To Net: NetName=P6_1 Pin=P6_1-1
+Added Pin To Net: NetName=P6_1 Pin=U1-13
+Added Net: Name=P6_1
+Added Pin To Net: NetName=P6_5_P12_1 Pin=P6_5_P12_1-1
+Added Pin To Net: NetName=P6_5_P12_1 Pin=U1-16
+Added Net: Name=P6_5_P12_1
+Added Pin To Net: NetName=P7_1 Pin=P7_1-1
+Added Pin To Net: NetName=P7_1 Pin=U1-38
+Added Net: Name=P7_1
+Added Pin To Net: NetName=VBUS_P13_2 Pin=U1-36
+Added Pin To Net: NetName=VBUS_P13_2 Pin=VBUS_P13_2-1
+Added Net: Name=VBUS_P13_2
+Added Class: Name=LEDs
+Added Member To Class: ClassName=Connectors Member=Component D+_P13_0 Test Point
+Added Member To Class: ClassName=Connectors Member=Component D-_P13_1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P3_5 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P3_7 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P5_1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P6_1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P6_5_P12_1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P7_1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component STK Stacking Header
+Added Member To Class: ClassName=Connectors Member=Component UART/PWM Molex Micro
+Added Member To Class: ClassName=Connectors Member=Component VBUS_P13_2 Test Point

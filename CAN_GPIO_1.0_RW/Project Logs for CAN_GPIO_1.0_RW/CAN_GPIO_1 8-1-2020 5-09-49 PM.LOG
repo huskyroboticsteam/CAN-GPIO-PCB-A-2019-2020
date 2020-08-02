@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=Breakout CAN NewDesignator=CAN
+Change Component Designator: OldDesignator=CAN NewDesignator=CAN LED
+Change Net Name : Old Net Name=NetCAN_2 New Net Name=NetCAN LED_2
+Added Room: Name=CAN
+Added Room: Name=Connectors
+Added Room: Name=LEDs
+Added Room: Name=PSoC

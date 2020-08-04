@@ -1,0 +1,3 @@
+Removed Member From Class: ClassName=Connectors Member=CAN
+Added Member To Class: ClassName=Connectors Member=Component CAN  Molex Micro
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

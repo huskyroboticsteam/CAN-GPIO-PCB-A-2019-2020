@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=P2_4 Pin=P2_2 P2_3 P2_4-1
+Removed Pin From Net: NetName=P2_3 Pin=P2_2 P2_3 P2_4-2
+Removed Pin From Net: NetName=P2_2 Pin=P2_2 P2_3 P2_4-3
+Removed Member From Class: ClassName=Connectors Member=CAN
+Change Component Designator: OldDesignator=CAN  NewDesignator= CAN
+Change Component Designator: OldDesignator=P2_2 P2_3 P2_4 NewDesignator=GND P2_3 Vcc
+Change Component Designator: OldDesignator=Vcc  NewDesignator= Vcc
+Added Component: Designator=P2_3(Test Point Through-hole)
+Added Component: Designator=P2_4(Test Point Through-hole)
+Added Pin To Net: NetName=GND Pin=GND P2_3 Vcc-1
+Added Pin To Net: NetName=P2_2 Pin=GND P2_3 Vcc-2
+Added Pin To Net: NetName=VCC Pin=GND P2_3 Vcc-3
+Added Pin To Net: NetName=P2_3 Pin=P2_3-1
+Added Pin To Net: NetName=P2_4 Pin=P2_4-1
+Added Member To Class: ClassName=Connectors Member=Component  CAN Molex Micro
+Added Member To Class: ClassName=Connectors Member=Component P2_3 Test Point
+Added Member To Class: ClassName=Connectors Member=Component P2_4 Test Point
+Added Member To Class: ClassName=PSoC Member=Component  Vcc Test Point

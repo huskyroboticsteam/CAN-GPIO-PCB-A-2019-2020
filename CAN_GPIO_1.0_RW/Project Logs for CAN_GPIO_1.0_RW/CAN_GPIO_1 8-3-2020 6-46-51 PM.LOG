@@ -1,0 +1,54 @@
+Added Component: Designator=TP1(Test Point Through-hole)
+Added Component: Designator=TP2(Test Point Through-hole)
+Added Component: Designator=TP3(Test Point Through-hole)
+Added Component: Designator=TP4(Test Point Through-hole)
+Added Component: Designator=TP5(Test Point Through-hole)
+Added Component: Designator=TP6(Test Point Through-hole)
+Added Component: Designator=TP7(Test Point Through-hole)
+Added Component: Designator=TP8(Test Point Through-hole)
+Added Component: Designator=TP9(Test Point Through-hole)
+Added Component: Designator=TP10(Test Point Through-hole)
+Added Component: Designator=TP11(Test Point Through-hole)
+Added Component: Designator=TP12(Test Point Through-hole)
+Added Component: Designator=TP13(Test Point Through-hole)
+Added Component: Designator=TP14(Test Point Through-hole)
+Added Component: Designator=TP15(Test Point Through-hole)
+Added Component: Designator=TP16(Test Point Through-hole)
+Added Component: Designator=TP17(Test Point Through-hole)
+Added Component: Designator=TP18(Test Point Through-hole)
+Added Component: Designator=TP19(Test Point Through-hole)
+Added Component: Designator=TP20(Test Point Through-hole)
+Added Component: Designator=TP21(Test Point Through-hole)
+Added Component: Designator=TP22(Test Point Through-hole)
+Added Component: Designator=TP23(Test Point Through-hole)
+Added Component: Designator=TP24(Test Point Through-hole)
+Added Component: Designator=TP25(Test Point Through-hole)
+Added Component: Designator=TP26(Test Point Through-hole)
+Added Component: Designator=TP27(Test Point Through-hole)
+Added Member To Class: ClassName=Connectors Member=Component TP1 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP2 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP3 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP4 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP5 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP6 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP7 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP8 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP9 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP10 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP11 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP12 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP13 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP14 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP15 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP16 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP17 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP18 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP19 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP20 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP21 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP22 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP23 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP24 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP25 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP26 Test Point
+Added Member To Class: ClassName=Connectors Member=Component TP27 Test Point

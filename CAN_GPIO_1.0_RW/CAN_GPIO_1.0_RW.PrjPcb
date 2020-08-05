@@ -42,7 +42,7 @@ PrefsRevisionGUID=
 
 [Document1]
 DocumentPath=PSoC.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -59,7 +59,7 @@ DocumentUniqueId=JHMGNYGH
 
 [Document2]
 DocumentPath=CAN.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -76,7 +76,7 @@ DocumentUniqueId=MFMQJFZQ
 
 [Document3]
 DocumentPath=LEDs.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=

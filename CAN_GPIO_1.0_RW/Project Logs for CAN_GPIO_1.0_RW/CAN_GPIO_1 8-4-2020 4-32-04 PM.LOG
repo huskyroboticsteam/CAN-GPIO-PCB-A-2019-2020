@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=Laser5V_1 Pin=U1-51
+Removed Pin From Net: NetName=ServoPWM1 Pin=U1-60
+Added Pin To Net: NetName=ServoPWM1 Pin=U1-51
+Added Pin To Net: NetName=Laser5V_1 Pin=U1-60

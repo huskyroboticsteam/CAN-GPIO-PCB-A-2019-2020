@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=P2_2 Pin=GND P2_3 Vcc-2
+Removed Pin From Net: NetName=P2_7 Pin=P2_7-1
+Change Component Designator: OldDesignator=P2_7 NewDesignator=P2_2
+Added Pin To Net: NetName=P2_7 Pin=GND P2_3 Vcc-2
+Added Pin To Net: NetName=P2_2 Pin=P2_2-1
+Added Member To Class: ClassName=Connectors Member=Component DH5 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH11 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH13 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH22 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH24 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH26 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH30 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH33 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH44 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH46 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH54 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH56 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH58 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH60 Test Point
+Added Member To Class: ClassName=Connectors Member=Component DH62 Test Point

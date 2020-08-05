@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=ServoPWM2 Pin=U1-51
+Removed Pin From Net: NetName=Laser5V_2 Pin=U1-60
+Added Pin To Net: NetName=Laser5V_2 Pin=U1-51
+Added Pin To Net: NetName=ServoPWM2 Pin=U1-60
+Added Member To Class: ClassName=PSoC Member=Component U1 CY8C4248AZI-L485

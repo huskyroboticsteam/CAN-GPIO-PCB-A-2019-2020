@@ -1,0 +1,2 @@
+Change Component Designator: OldDesignator=Pot/PWM NewDesignator=Pot
+Change Component Designator: OldDesignator=UART/PWM NewDesignator=UART

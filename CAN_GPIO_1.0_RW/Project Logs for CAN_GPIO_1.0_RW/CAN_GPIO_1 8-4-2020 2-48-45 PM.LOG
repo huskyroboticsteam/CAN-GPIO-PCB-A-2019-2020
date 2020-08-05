@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=CANH Pin=J2-3
+Removed Member From Class: ClassName=Connectors Member=CAN
+Added Pin To Net: NetName=CANH Pin=J2-2
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=R7-2
+Added Net: Name=NetJ2_1
+Added Member To Class: ClassName=Connectors Member=Component CAN  Molex Micro
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

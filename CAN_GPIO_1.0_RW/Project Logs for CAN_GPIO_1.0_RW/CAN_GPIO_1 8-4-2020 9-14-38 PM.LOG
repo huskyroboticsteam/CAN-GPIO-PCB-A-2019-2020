@@ -1,0 +1,63 @@
+Removed Member From Class: ClassName=Connectors Member=DH70
+Change Component Designator: OldDesignator=DH10 NewDesignator=DH9
+Change Component Designator: OldDesignator=DH11 NewDesignator=DH10
+Change Component Designator: OldDesignator=DH12 NewDesignator=DH11
+Change Component Designator: OldDesignator=DH13 NewDesignator=DH12
+Change Component Designator: OldDesignator=DH15 NewDesignator=DH14
+Change Component Designator: OldDesignator=DH16 NewDesignator=DH3
+Change Component Designator: OldDesignator=DH17 NewDesignator=DH15
+Change Component Designator: OldDesignator=DH18 NewDesignator=DH16
+Change Component Designator: OldDesignator=DH19 NewDesignator=DH17
+Change Component Designator: OldDesignator=DH20 NewDesignator=DH18
+Change Component Designator: OldDesignator=DH21 NewDesignator=DH19
+Change Component Designator: OldDesignator=DH22 NewDesignator=DH20
+Change Component Designator: OldDesignator=DH23 NewDesignator=DH21
+Change Component Designator: OldDesignator=DH24 NewDesignator=DH5
+Change Component Designator: OldDesignator=DH25 NewDesignator=DH22
+Change Component Designator: OldDesignator=DH26 NewDesignator=DH23
+Change Component Designator: OldDesignator=DH27 NewDesignator=DH24
+Change Component Designator: OldDesignator=DH28 NewDesignator=DH25
+Change Component Designator: OldDesignator=DH29 NewDesignator=DH26
+Change Component Designator: OldDesignator=DH30 NewDesignator=DH27
+Change Component Designator: OldDesignator=DH32 NewDesignator=DH13
+Change Component Designator: OldDesignator=DH33 NewDesignator=DH29
+Change Component Designator: OldDesignator=DH34 NewDesignator=DH30
+Change Component Designator: OldDesignator=DH35 NewDesignator=DH31
+Change Component Designator: OldDesignator=DH36 NewDesignator=DH32
+Change Component Designator: OldDesignator=DH38 NewDesignator=DH34
+Change Component Designator: OldDesignator=DH39 NewDesignator=DH35
+Change Component Designator: OldDesignator=DH40 NewDesignator=DH33
+Change Component Designator: OldDesignator=DH41 NewDesignator=DH36
+Change Component Designator: OldDesignator=DH43 NewDesignator=DH38
+Change Component Designator: OldDesignator=DH44 NewDesignator=DH39
+Change Component Designator: OldDesignator=DH45 NewDesignator=DH40
+Change Component Designator: OldDesignator=DH46 NewDesignator=DH41
+Change Component Designator: OldDesignator=DH47 NewDesignator=DH42
+Change Component Designator: OldDesignator=DH48 NewDesignator=DH28
+Change Component Designator: OldDesignator=DH49 NewDesignator=DH43
+Change Component Designator: OldDesignator=DH51 NewDesignator=DH45
+Change Component Designator: OldDesignator=DH52 NewDesignator=DH46
+Change Component Designator: OldDesignator=DH53 NewDesignator=DH47
+Change Component Designator: OldDesignator=DH54 NewDesignator=DH48
+Change Component Designator: OldDesignator=DH55 NewDesignator=DH49
+Change Component Designator: OldDesignator=DH56 NewDesignator=DH37
+Change Component Designator: OldDesignator=DH57 NewDesignator=DH50
+Change Component Designator: OldDesignator=DH58 NewDesignator=DH51
+Change Component Designator: OldDesignator=DH59 NewDesignator=DH52
+Change Component Designator: OldDesignator=DH60 NewDesignator=DH53
+Change Component Designator: OldDesignator=DH61 NewDesignator=DH54
+Change Component Designator: OldDesignator=DH62 NewDesignator=DH55
+Change Component Designator: OldDesignator=DH64 NewDesignator=DH44
+Change Component Designator: OldDesignator=DH65 NewDesignator=DH57
+Change Component Designator: OldDesignator=DH66 NewDesignator=DH58
+Change Component Designator: OldDesignator=DH67 NewDesignator=DH59
+Change Component Designator: OldDesignator=DH68 NewDesignator=DH60
+Change Component Designator: OldDesignator=DH69 NewDesignator=DH61
+Change Component Designator: OldDesignator=DH70 NewDesignator=DH62
+Change Component Designator: OldDesignator=DH71 NewDesignator=DH56
+Added Component: Designator=GND4(Test Point Through-hole)
+Added Component: Designator=GND5(Test Point Through-hole)
+Added Pin To Net: NetName=GND Pin=GND4-1
+Added Pin To Net: NetName=GND Pin=GND5-1
+Added Member To Class: ClassName=Connectors Member=Component GND4 Test Point
+Added Member To Class: ClassName=Connectors Member=Component GND5 Test Point

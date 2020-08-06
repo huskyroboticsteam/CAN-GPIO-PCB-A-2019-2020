@@ -1,0 +1,5 @@
+Removed Member From Class: ClassName=Connectors Member=CANL
+Added Member To Class: ClassName=Connectors Member=Component CANH  Test Point
+Added Member To Class: ClassName=Connectors Member=Component CANL  Test Point
+Added Member To Class: ClassName=LEDs Member=Component CAN LED
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

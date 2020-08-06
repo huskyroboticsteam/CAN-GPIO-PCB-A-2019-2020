@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=CAN -1
+Removed Pin From Net: NetName=VCC Pin=CAN -2
+Removed Pin From Net: NetName=CANH Pin=CAN -3
+Removed Pin From Net: NetName=CANL Pin=CAN -4
+Removed Member From Class: ClassName=Connectors Member=CAN
+Removed Member From Class: ClassName=Connectors Member=DH61
+Removed Member From Class: ClassName=Connectors Member=DH62
+Added Component: Designator=CANH (Test Point Through-hole)
+Added Component: Designator=CANL (Test Point Through-hole)
+Added Pin To Net: NetName=CANH Pin=CANH -1
+Added Pin To Net: NetName=CANL Pin=CANL -1
+Added Member To Class: ClassName=Connectors Member=Component CANH  Test Point
+Added Member To Class: ClassName=Connectors Member=Component CANL  Test Point
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

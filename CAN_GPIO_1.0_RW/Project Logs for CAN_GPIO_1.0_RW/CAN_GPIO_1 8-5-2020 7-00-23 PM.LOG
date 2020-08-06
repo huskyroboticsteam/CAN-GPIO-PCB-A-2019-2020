@@ -1,0 +1,9 @@
+Removed Member From Class: ClassName=Connectors Member=CANH
+Removed Member From Class: ClassName=Connectors Member=CANL
+Change Component Footprint: Designator=SPI Old Footprint=MOLX-43045-0812_V New Footprint=MICROFIT R/A 8 PIN
+Change Component Comment : Designator=SPI Old Comment=43045-0812 New Comment=Molex micro-fit 8-pin
+Change Managed Component Library Link : Designator=SPI Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=E8E15A97-F62B-4CD8-9E66-69E5B3CD4AAB New ItemGUID= Old RevisionGUID=52FE11C2-6DAF-414F-9E7D-353D935F746C New RevisionGUID=
+Change component parameters: Designator = "SPI" ("SPI"); Footprint = "MOLX-43045-0812_V"; UniqueID = "\ZSSQDTTF" ("\ZSSQDTTF")
+Added Member To Class: ClassName=Connectors Member=Component CANH  Test Point
+Added Member To Class: ClassName=Connectors Member=Component CANL  Test Point
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

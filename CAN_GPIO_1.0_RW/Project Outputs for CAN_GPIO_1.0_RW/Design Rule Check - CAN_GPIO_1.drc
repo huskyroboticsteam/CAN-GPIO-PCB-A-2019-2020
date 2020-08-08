@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\warre\Documents\Husky Robotics\CAN-GPIO-PCB-A-2019-2020\CAN_GPIO_1.0_RW\CAN_GPIO_1.0_RW.PcbDoc
 Date     : 8/8/2020
-Time     : 11:37:54 AM
+Time     : 12:06:16 PM
 
 Processing Rule : Clearance Constraint (Gap=8mil) (OnLayer('Top Layer')),(All)
 Rule Violations :0
@@ -39,7 +39,7 @@ Rule Violations :0
 Processing Rule : Minimum Solder Mask Sliver (Gap=3.937mil) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C1-1(1150mil,1612.992mil) on Bottom Layer And Pad C1-2(1150mil,1550mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]
    Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C2-1(631.472mil,1165.96mil) on Bottom Layer And Pad C2-2(568.48mil,1165.96mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]
-   Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C3-1(1557.992mil,1315mil) on Bottom Layer And Pad C3-2(1495mil,1315mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]
+   Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C3-1(1591.496mil,1430mil) on Bottom Layer And Pad C3-2(1528.504mil,1430mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]
    Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C4-1(631.472mil,1079.849mil) on Bottom Layer And Pad C4-2(568.48mil,1079.849mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]
    Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C5-1(568.504mil,910mil) on Bottom Layer And Pad C5-2(631.496mil,910mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]
    Violation between Minimum Solder Mask Sliver Constraint: (3.811mil < 3.937mil) Between Pad C6-1(920mil,407.008mil) on Bottom Layer And Pad C6-2(920mil,470mil) on Bottom Layer [Bottom Solder] Mask Sliver [3.811mil]

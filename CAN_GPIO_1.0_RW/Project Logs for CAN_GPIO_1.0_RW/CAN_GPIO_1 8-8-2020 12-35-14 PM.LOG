@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=GND5-1
+Change Component Designator: OldDesignator=GND5 NewDesignator=Vcc  
+Added Pin To Net: NetName=VCC Pin=Vcc  -1
+Added Room: Name=CAN
+Added Room: Name=Connectors
+Added Room: Name=LEDs
+Added Room: Name=PSoC

@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=Pot Pin=U1-2
+Removed Pin From Net: NetName=Pot2 Pin=U1-3
+Removed Member From Class: ClassName=Connectors Member=CANH
+Removed Member From Class: ClassName=Connectors Member=CANL
+Change Component Designator: OldDesignator=P2_2 NewDesignator=UARTRX
+Change Component Designator: OldDesignator=P2_3 NewDesignator=UARTTX
+Added Pin To Net: NetName=Pot Pin=U1-4
+Added Pin To Net: NetName=Pot2 Pin=U1-5
+Change Net Name : Old Net Name=RXD New Net Name=UARTRXD
+Change Net Name : Old Net Name=TXD New Net Name=UARTTXD
+Added Pin To Net: NetName=UARTRX Pin=U1-2
+Added Pin To Net: NetName=UARTRX Pin=UARTRX-1
+Added Net: Name=UARTRX
+Added Pin To Net: NetName=UARTTX Pin=U1-3
+Added Pin To Net: NetName=UARTTX Pin=UARTTX-1
+Added Net: Name=UARTTX
+Added Member To Class: ClassName=Connectors Member=Component CANH  Test Point
+Added Member To Class: ClassName=Connectors Member=Component CANL  Test Point
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

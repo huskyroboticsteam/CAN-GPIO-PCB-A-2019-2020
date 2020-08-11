@@ -1,0 +1,12 @@
+Removed Member From Class: ClassName=Connectors Member=CANH
+Removed Member From Class: ClassName=Connectors Member=CANL
+Removed Member From Class: ClassName=Connectors Member=Vcc
+Change Component Footprint: Designator=Rx Old Footprint=Test Point pad New Footprint=Test Point Through-hole
+Change Component Footprint: Designator=Tx Old Footprint=Test Point pad New Footprint=Test Point Through-hole
+Change Component Designator: OldDesignator=Vcc   NewDesignator=Vcc 
+Change Component Designator: OldDesignator=Vcc  NewDesignator=Vcc  
+Added Member To Class: ClassName=Connectors Member=Component CANH  Test Point
+Added Member To Class: ClassName=Connectors Member=Component CANL  Test Point
+Added Member To Class: ClassName=PSoC Member=Component U1 CY8C4248AZI-L485
+Added Member To Class: ClassName=Connectors Member=Component Vcc   Test Point
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

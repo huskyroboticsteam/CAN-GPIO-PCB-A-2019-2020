@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=Pot Pin=U1-4
+Removed Pin From Net: NetName=Pot2 Pin=U1-5
+Removed Member From Class: ClassName=Connectors Member=Vcc  
+Change Component Designator: OldDesignator=DH56 NewDesignator=P2_2
+Change Component Designator: OldDesignator=DH57 NewDesignator=P2_3
+Added Pin To Net: NetName=Pot Pin=U1-2
+Added Pin To Net: NetName=Pot2 Pin=U1-3
+Added Pin To Net: NetName=UARTRXD Pin=UARTRX-1
+Added Pin To Net: NetName=UARTTXD Pin=UARTTX-1
+Added Pin To Net: NetName=P2_2 Pin=P2_2-1
+Added Pin To Net: NetName=P2_2 Pin=U1-4
+Added Net: Name=P2_2
+Added Pin To Net: NetName=P2_3 Pin=P2_3-1
+Added Pin To Net: NetName=P2_3 Pin=U1-5
+Added Net: Name=P2_3
+Added Member To Class: ClassName=Connectors Member=Component Vcc  Test Point

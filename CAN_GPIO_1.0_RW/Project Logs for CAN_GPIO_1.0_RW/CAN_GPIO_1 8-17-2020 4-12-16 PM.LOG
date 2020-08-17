@@ -1,0 +1,140 @@
+Change Physical Footprint: Designator=3.3V Old Footprint=RESC0402(1005)_L New Footprint=RESC0402(1005)_L
+Change Physical Footprint: Designator=5V Old Footprint=RESC0402(1005)_L New Footprint=RESC0402(1005)_L
+Change Physical Footprint: Designator=C1 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C2 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C3 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C4 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C5 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C6 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C7 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=C8 Old Footprint=Cap 0805 New Footprint=Cap 0805
+Change Physical Footprint: Designator=CAN Old Footprint=0805_A New Footprint=0805_A
+Change Physical Footprint: Designator=CANH Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=CANH  Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=CANL Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=CANL  Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=CAN Termination Old Footprint=HDR1X3 New Footprint=HDR1X3
+Change Physical Footprint: Designator=CLK Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=D1 Old Footprint=ONSC-SMB-2-403A-03_H_V New Footprint=ONSC-SMB-2-403A-03_H_V
+Change Physical Footprint: Designator=Data Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=Debug Old Footprint=0805_A New Footprint=0805_A
+Change Physical Footprint: Designator=DH1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH2 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH3 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH4 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH5 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH6 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH7 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH8 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH9 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH10 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH11 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH12 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH13 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH14 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH15 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH16 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH17 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH18 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH19 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH20 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH21 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH22 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH23 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH24 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH25 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH26 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH27 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH28 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH29 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH30 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH31 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH32 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH33 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH34 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH35 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH36 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH37 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH38 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH39 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH40 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH41 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH42 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH43 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH44 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH45 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH46 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH47 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH48 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH49 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH50 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH51 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH52 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH53 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH54 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=DH55 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Encoder Old Footprint=MICROFIT R/A 6 PIN New Footprint=MICROFIT R/A 6 PIN
+Change Physical Footprint: Designator=F1 Old Footprint=BOUR-MF-NSMF150-2_V New Footprint=BOUR-MF-NSMF150-2_V
+Change Physical Footprint: Designator=Fault Old Footprint=0805_A New Footprint=0805_A
+Change Physical Footprint: Designator=GND Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=GND1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=GND2 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=GND3 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=GND4 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=GND P2_3 Vcc Old Footprint=PHOENIX_1985836 New Footprint=PHOENIX_1985836
+Change Physical Footprint: Designator=I2C Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=P2_2 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P2_3 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P2_4 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P2_5 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P2_6 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P3_5 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P3_7 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P5_1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P6_1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P6_5 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P7_1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P13_0 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P13_1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=P13_2 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Pot Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=PRG Old Footprint=programming3D New Footprint=programming3D
+Change Physical Footprint: Designator=PWM_1 Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=PWM_2 Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=PWM_3 Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=PWM_4 Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=PWM_5 Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=PWR Old Footprint=0805_A New Footprint=0805_A
+Change Physical Footprint: Designator=R1 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R2 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R3 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R4 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R5 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R6 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R7 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R8 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R9 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R10 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=R11 Old Footprint=RESC0805(2012)_N New Footprint=RESC0805(2012)_N
+Change Physical Footprint: Designator=RESET Old Footprint=Switch 6mm 24V (NO) New Footprint=Switch 6mm 24V (NO)
+Change Physical Footprint: Designator=Rx Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=SH1 Old Footprint=Screw Hole New Footprint=Screw Hole
+Change Physical Footprint: Designator=SH2 Old Footprint=Screw Hole New Footprint=Screw Hole
+Change Physical Footprint: Designator=SH3 Old Footprint=Screw Hole New Footprint=Screw Hole
+Change Physical Footprint: Designator=SH4 Old Footprint=Screw Hole New Footprint=Screw Hole
+Change Physical Footprint: Designator=SPI Old Footprint=MICROFIT R/A 8 PIN New Footprint=MICROFIT R/A 8 PIN
+Change Physical Footprint: Designator=Standard Header Old Footprint=SMTC-SSQ-108-02-X-D New Footprint=SMTC-SSQ-108-02-X-D
+Change Physical Footprint: Designator=SW1 Old Footprint=CKCP-TDA04H0SB1R_V New Footprint=CKCP-TDA04H0SB1R_V
+Change Physical Footprint: Designator=Tx Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=U1 Old Footprint=TQFP50P1200X1200X160-64N New Footprint=TQFP50P1200X1200X160-64N
+Change Physical Footprint: Designator=U2 Old Footprint=SOIC127P600X175-8N New Footprint=SOIC127P600X175-8N
+Change Physical Footprint: Designator=UART Old Footprint=MICROFIT R/A 4 PIN New Footprint=MICROFIT R/A 4 PIN
+Change Physical Footprint: Designator=UARTRX Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=UARTTX Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Vcc Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=Vcc  Old Footprint=Test Point pad New Footprint=Test Point pad
+Change Physical Footprint: Designator=Vcc   Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Vcc1 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Vcc2 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Vcc3 Old Footprint=Test Point Through-hole New Footprint=Test Point Through-hole
+Change Physical Footprint: Designator=Y1 Old Footprint=SG-636_3D New Footprint=SG-636_3D

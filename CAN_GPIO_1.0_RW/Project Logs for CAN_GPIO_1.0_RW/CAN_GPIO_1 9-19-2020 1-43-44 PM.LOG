@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=SCL Pin=I2C-2
+Removed Pin From Net: NetName=SDA Pin=I2C-3
+Removed Pin From Net: NetName=VCC Pin=R1-2
+Removed Pin From Net: NetName=MISO Pin=SPI-2
+Removed Pin From Net: NetName=SC1 Pin=SPI-3
+Removed Pin From Net: NetName=SC3 Pin=SPI-4
+Removed Pin From Net: NetName=MOSI Pin=SPI-5
+Removed Pin From Net: NetName=SCK Pin=SPI-6
+Removed Pin From Net: NetName=Reset Pin=U1-47
+Removed Member From Class: ClassName=PSoC Member=R1
+Change Component Comment : Designator=R6 Old Comment=Resistor 0805 New Comment=47 kOhm
+Change Component Comment : Designator=R7 Old Comment=Resistor 0805 New Comment=120R
+Change Component Comment : Designator=R8 Old Comment=Resistor 0805 New Comment=200 Ohm
+Change Component Comment : Designator=R9 Old Comment=Resistor 0805 New Comment=300 Ohm
+Change Component Comment : Designator=R10 Old Comment=Resistor 0805 New Comment=300 Ohm
+Change Component Comment : Designator=R11 Old Comment=Resistor 0805 New Comment=300 Ohm
+Change Component Designator: OldDesignator=CANH  NewDesignator=CANH
+Change Component Designator: OldDesignator=CANH NewDesignator=CANH 
+Change Component Designator: OldDesignator=CANL  NewDesignator=CANL
+Change Component Designator: OldDesignator=CANL NewDesignator=CANL 
+Change Component Designator: OldDesignator=Vcc   NewDesignator=Vcc
+Change Component Designator: OldDesignator=Vcc  NewDesignator=Vcc  
+Change Component Designator: OldDesignator=Vcc NewDesignator=Vcc 
+Change component parameters: Designator = "R6" ("R6"); Footprint = "RESC0805(2012)_N"; UniqueID = "\IYFUQNZW" ("\IYFUQNZW")
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "47 kOhm"; VariantName = "[No Variations]"
+Added Component: Designator=R12(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "47 kOhm"; VariantName = "[No Variations]"
+Added Component: Designator=R?(RESC0805(2012)_N)
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "120R"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=I2C-2
+Added Pin To Net: NetName=SCL Pin=I2C-3
+Added Pin To Net: NetName=SDA Pin=I2C-4
+Added Pin To Net: NetName=GND Pin=R12-1
+Added Pin To Net: NetName=Clock Pin=R12-2
+Added Pin To Net: NetName=Reset Pin=R?-1
+Added Pin To Net: NetName=VCC Pin=RESET-2a
+Added Pin To Net: NetName=VCC Pin=SPI-2
+Added Pin To Net: NetName=MOSI Pin=SPI-3
+Added Pin To Net: NetName=MISO Pin=SPI-4
+Added Pin To Net: NetName=SCK Pin=SPI-5
+Added Pin To Net: NetName=SC1 Pin=SPI-6
+Added Pin To Net: NetName=SC3 Pin=SPI-8
+Added Pin To Net: NetName=NetR?_2 Pin=R?-2
+Added Pin To Net: NetName=NetR?_2 Pin=U1-47
+Added Net: Name=NetR?_2
+Added Member To Class: ClassName=Connectors Member=Component R12 47 kOhm
+Added Member To Class: ClassName=PSoC Member=Component R? Resistor 0805
+Added Member To Class: ClassName=PSoC Member=Component Vcc   Test Point

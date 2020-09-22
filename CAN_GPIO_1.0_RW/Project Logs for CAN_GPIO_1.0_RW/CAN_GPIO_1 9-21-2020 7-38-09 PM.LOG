@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=VCC Pin=RESET-2a
+Removed Pin From Net: NetName=VCC Pin=Vcc -1
+Removed Member From Class: ClassName=PSoC Member=Vcc
+Change Component Designator: OldDesignator=CANH  NewDesignator=CANH
+Change Component Designator: OldDesignator=CANH NewDesignator=CANH 
+Change Component Designator: OldDesignator=CANL  NewDesignator=CANL
+Change Component Designator: OldDesignator=CANL NewDesignator=CANL 
+Added Pin To Net: NetName=NetRESET_2a Pin=RESET-2a
+Added Pin To Net: NetName=NetRESET_2a Pin=Vcc -1
+Added Net: Name=NetRESET_2a
+Added Member To Class: ClassName=PSoC Member=Component Vcc   Test Point
+Added Member To Class: ClassName=PSoC Member=Component Vcc  Test Point

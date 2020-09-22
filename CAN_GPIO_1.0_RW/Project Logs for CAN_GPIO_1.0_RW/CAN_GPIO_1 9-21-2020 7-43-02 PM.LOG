@@ -1,0 +1,7 @@
+Removed Member From Class: ClassName=CAN Member=CANH 
+Removed Member From Class: ClassName=CAN Member=CANL 
+Change Component Designator: OldDesignator=Vcc  NewDesignator=Reset 
+Added Pin To Net: NetName=Reset Pin=Reset -1
+Added Pin To Net: NetName=Reset Pin=RESET-2a
+Added Member To Class: ClassName=CAN Member=Component CANH Test Point
+Added Member To Class: ClassName=CAN Member=Component CANL Test Point

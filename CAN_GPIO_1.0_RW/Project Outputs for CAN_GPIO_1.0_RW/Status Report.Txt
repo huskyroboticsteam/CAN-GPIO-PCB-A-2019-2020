@@ -1,0 +1,37 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Project [CAN_GPIO_1.0_RW.PrjPcb]
+   Generated File[CAN_GPIO_1.0_RW_Copper_Signal_Top.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Copper_Signal_1.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Copper_Signal_2.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Copper_Signal_Bot.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Pads_Bot.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Pads_Top.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Legend_Bot.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Soldermask_Bot.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Paste_Bot.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Legend_Top.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Paste_Top.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Soldermask_Top.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Keep-out.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_13.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_4.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_17.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_16.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_19.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_1.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Mechanical_15.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Profile.gbr]
+   Generated File[CAN_GPIO_1.0_RW_NPTH_Drill.gbr]
+   Generated File[CAN_GPIO_1.0_RW_PTH_Drill.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Drawing_1.gbr]
+   Generated File[CAN_GPIO_1.0_RW_Drillmap_1.gbr]
+   Generated File[CAN_GPIO_1.0_RW.RUL]
+   Generated File[CAN_GPIO_1.0_RW.EXTREP]
+   Generated File[CAN_GPIO_1.0_RW.REP]
+
+
+Files Generated   : 28
+Documents Printed : 0
+
+Finished Output Generation At 8:11:05 PM On 9/21/2020

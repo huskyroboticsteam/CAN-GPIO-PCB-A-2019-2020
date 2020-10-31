@@ -30,10 +30,10 @@ FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 OutputPath=
 LogFolderPath=
-ManagedProjectGUID=31C7ECDF-6C94-4846-807A-9A4580EFDBC9
-VaultGUID=8C0BB535-647C-4B42-B85F-F173F8B68E3F
+ManagedProjectGUID=72EBE074-A1FF-417C-AFE5-03D3D4A4147C
+VaultGUID=0540fcec-2608-4679-aba5-fd3852aaa5c0
 ReleaseVaultName=University of Washington - Husky Robotics Team
-ItemGUID=31C7ECDF-6C94-4846-807A-9A4580EFDBC9
+ItemGUID=72EBE074-A1FF-417C-AFE5-03D3D4A4147C
 IncludeDesignInRelease=0
 
 [Preferences]
